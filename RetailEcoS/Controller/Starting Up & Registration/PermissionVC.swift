@@ -8,7 +8,7 @@
 
 
 import UIKit
-
+//gitCheck
 class PermissionVC: UIViewController {
 
     @IBOutlet weak var permissionView: UIView!
