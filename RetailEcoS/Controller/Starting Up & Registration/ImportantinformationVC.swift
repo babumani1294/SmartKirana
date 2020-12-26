@@ -11,21 +11,39 @@ import UIKit
 
 class ImportantinformationVC: UIViewController {
 
+    ///mark; property
+    
+    
+    
+    ///mark: outlet
+    @IBOutlet weak var viewLogo: UIView!
+    @IBOutlet weak var viewImpInfo: UIView!
+    
+    
+    
+    ///mark: action
+    
+    @IBAction func goBack(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func goNext(_ sender: UIButton) {
+//        performSegue(withIdentifier: "showImpInfo", sender: self)
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        initialConfig()
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+   ///mark: functions
+    func initialConfig() {
+        viewLogo.shadowEffects(shadow: .DarkShadow, getView: viewLogo)
+        viewImpInfo.shadowEffects(shadow: .DarkShadow, getView: viewImpInfo)
     }
-    */
+    
 
 }

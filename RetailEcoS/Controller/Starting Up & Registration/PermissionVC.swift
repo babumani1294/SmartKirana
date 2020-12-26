@@ -11,28 +11,49 @@ import UIKit
 //gitChecks
 class PermissionVC: UIViewController {
 
-    @IBOutlet weak var permissionView: UIView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    //Border color for Permission view
-        permissionView.layer.borderWidth = 1
-        permissionView.layer.borderColor = #colorLiteral(red: 0.05882352941, green: 0.2588235294, blue: 0.9019607843, alpha: 1)
-        let deviceID = UIDevice.current.identifierForVendor!.uuidString
-           print(deviceID)
-        
-        
-     
+    ///mark: property
+    
+    
+    
+    
+    ///mark: outlet
+    @IBOutlet weak var viewInfo1: UIView!
+    @IBOutlet weak var viewInfo2: UIView!
+    @IBOutlet weak var viewRetailEcos: UIView!
+    @IBOutlet weak var viewPermission: UIView!
+    
+    
+    
+    ///mark: action
+    
+    @IBAction func goBack(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func goNext(_ sender: UIButton) {
+        performSegue(withIdentifier: "showImpInfo", sender: self)
     }
-    */
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        initialConfig()
+    }
+    
+    
+    ///mark: function
+    
+    func initialConfig() {
+        viewPermission.shadowEffects(shadow: .DarkShadow, getView: viewPermission)
+        viewRetailEcos.shadowEffects(shadow: .DarkShadow, getView: viewRetailEcos)
+        viewInfo1.shadowEffects(shadow: .DarkShadow, getView: viewInfo1)
+        viewInfo2.shadowEffects(shadow: .DarkShadow, getView: viewInfo2)
+        viewInfo1.shadowEffects(shadow: .WithBorder, getView: viewInfo1)
+        viewInfo2.shadowEffects(shadow: .WithBorder, getView: viewInfo2)
+        
+        let deviceID = UIDevice.current.identifierForVendor!.uuidString
+        print(deviceID)
+    }
+ 
 
 }
