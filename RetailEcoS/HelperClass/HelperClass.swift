@@ -47,10 +47,14 @@ extension UIView{
         default:
             print("shadow")
         }
-        
-        
-       
-
+     
+    }
+    
+    func setImageColor(image: UIImageView,color: UIColor){
+        let templateImage =  image.image?.withRenderingMode(.alwaysTemplate)
+        image.image = templateImage
+        image.contentMode = .scaleAspectFit
+        image.tintColor = color
     }
 }
 

@@ -74,8 +74,8 @@ class LoginVC: UIViewController {
         
         customAlertView.btnClick = self
         UIView.animate(withDuration: 1, animations: { [self] in
-            customAlertView.viewAlert.shadowEffects(shadow: .WithBorder, getView: customAlertView.viewAlert)
-            customAlertView.alpha = 1
+            self.customAlertView.viewAlert.shadowEffects(shadow: .WithBorder, getView: self.customAlertView.viewAlert)
+            self.customAlertView.alpha = 1
         }, completion: nil)
         
         viewSmartKirana.shadowEffects(shadow: .DarkShadow, getView: viewSmartKirana)
@@ -94,7 +94,7 @@ extension LoginVC: alertButtonclickEvent{
     
     func alertButtonClickEvent(Btn: UIButton) {
         UIView.animate(withDuration: 1, animations: { [self] in
-            customAlertView.alpha = 0
+            self.customAlertView.alpha = 0
         }, completion: nil)
     }
 }

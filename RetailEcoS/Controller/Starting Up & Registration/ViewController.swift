@@ -47,8 +47,7 @@ class ViewController: UIViewController {
         viewDescription.shadowEffects(shadow: .WithBorder, getView: viewDescription)
         viewAbout.shadowEffects(shadow: .DarkShadow, getView: viewAbout)
         viewRetail.shadowEffects(shadow: .DarkShadow, getView: viewRetail)
-        btnPermission.shadowEffects(shadow: .LightShadow, getView: btnPermission)
-        btnTermsCondition.shadowEffects(shadow: .LightShadow, getView: btnTermsCondition)
+        
     }
     
 }
