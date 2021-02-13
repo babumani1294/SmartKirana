@@ -39,12 +39,12 @@ class Status : Codable{
     var splash: [SplashList]?
     var Result : Int?
     
-    init(getCountry: String,Message: String,splash: [SplashList],result: Int) {
-        self.Country_flag = getCountry
-        self.Message = Message
-        self.splash = splash
-        self.Result = result
-    }
+//    init(getCountry: String,Message: String,splash: [SplashList],result: Int) {
+//        self.Country_flag = getCountry
+//        self.Message = Message
+//        self.splash = splash
+//        self.Result = result
+//    }
     
 }
 
@@ -53,12 +53,12 @@ class SplashList : Codable{
     var Title : String?
     var Id : Int?
     var Logo: String?
-    init(Lapse_Time: String,Title: String,Id: Int,Logo: String) {
-        self.Lapse_Time = Lapse_Time
-        self.Title = Title
-        self.Id = Id
-        self.Logo = Logo
-    }
+//    init(Lapse_Time: String,Title: String,Id: Int,Logo: String) {
+//        self.Lapse_Time = Lapse_Time
+//        self.Title = Title
+//        self.Id = Id
+//        self.Logo = Logo
+//    }
     
 }
 
