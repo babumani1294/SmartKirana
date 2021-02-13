@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "close sq.png",
+      "filename" : "Image.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "close sq-1.png",
+      "filename" : "Image-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "close sq-2.png",
+      "filename" : "Image-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

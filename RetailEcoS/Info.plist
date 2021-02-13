@@ -2,6 +2,23 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSContactsUsageDescription</key>
+	<string>contact use</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>photo use</string>
+	<key>NSCameraUsageDescription</key>
+	<string>camera use</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Open Sans Bold Italic.ttf</string>
+		<string>Open Sans Bold.ttf</string>
+		<string>Open Sans Italic.ttf</string>
+		<string>Open Sans Regular.ttf</string>
+	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Application wants to use your location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Application wants to use your location</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

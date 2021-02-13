@@ -44,12 +44,12 @@ class PermissionVC: UIViewController {
     ///mark: function
     
     func initialConfig() {
-        viewPermission.shadowEffects(shadow: .DarkShadow, getView: viewPermission)
-        viewRetailEcos.shadowEffects(shadow: .DarkShadow, getView: viewRetailEcos)
-        viewInfo1.shadowEffects(shadow: .DarkShadow, getView: viewInfo1)
-        viewInfo2.shadowEffects(shadow: .DarkShadow, getView: viewInfo2)
-        viewInfo1.shadowEffects(shadow: .WithBorder, getView: viewInfo1)
-        viewInfo2.shadowEffects(shadow: .WithBorder, getView: viewInfo2)
+        viewPermission.shadowEffects(shadow: .DarkShadow, getView: viewPermission, cornerRadius: 12)
+        viewRetailEcos.shadowEffects(shadow: .DarkShadow, getView: viewRetailEcos, cornerRadius: 12)
+        viewInfo1.shadowEffects(shadow: .DarkShadow, getView: viewInfo1, cornerRadius: 12)
+        viewInfo2.shadowEffects(shadow: .DarkShadow, getView: viewInfo2, cornerRadius: 12)
+        viewInfo1.shadowEffects(shadow: .WithBorder, getView: viewInfo1, cornerRadius: 12)
+        viewInfo2.shadowEffects(shadow: .WithBorder, getView: viewInfo2, cornerRadius: 12)
         
         let deviceID = UIDevice.current.identifierForVendor!.uuidString
         print(deviceID)

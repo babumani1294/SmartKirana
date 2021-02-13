@@ -43,10 +43,10 @@ class ViewController: UIViewController {
     ///mark: function
     func initialConfig() {
         
-        viewDescription.shadowEffects(shadow: .DarkShadow, getView: viewDescription)
-        viewDescription.shadowEffects(shadow: .WithBorder, getView: viewDescription)
-        viewAbout.shadowEffects(shadow: .DarkShadow, getView: viewAbout)
-        viewRetail.shadowEffects(shadow: .DarkShadow, getView: viewRetail)
+        viewDescription.shadowEffects(shadow: .DarkShadow, getView: viewDescription, cornerRadius: 12)
+        viewDescription.shadowEffects(shadow: .WithBorder, getView: viewDescription, cornerRadius: 12)
+        viewAbout.shadowEffects(shadow: .DarkShadow, getView: viewAbout, cornerRadius: 12)
+        viewRetail.shadowEffects(shadow: .DarkShadow, getView: viewRetail, cornerRadius: 12)
         
     }
     

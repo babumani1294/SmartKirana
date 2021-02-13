@@ -41,8 +41,8 @@ class ImportantinformationVC: UIViewController {
 
    ///mark: functions
     func initialConfig() {
-        viewLogo.shadowEffects(shadow: .DarkShadow, getView: viewLogo)
-        viewImpInfo.shadowEffects(shadow: .DarkShadow, getView: viewImpInfo)
+        viewLogo.shadowEffects(shadow: .DarkShadow, getView: viewLogo, cornerRadius: 12)
+        viewImpInfo.shadowEffects(shadow: .DarkShadow, getView: viewImpInfo, cornerRadius: 12)
     }
     
 
