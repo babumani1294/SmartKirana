@@ -97,6 +97,155 @@ class LoginController: UIViewController {
     }
     var finalPassword : String?
     
+    var getDeviceId : String?
+    var getSelectedRetailId: Int?
+    
+    var getModelToRequestHomeDetails: ModelToRequestHomeDetails!
+    var getHomeControllerVM : HomeControllerViewModel!
+    
+    var activityIndicator = UIActivityIndicatorView()
+    var strLabel = UILabel()
+    let effectView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
+    
+    
+    var subMenu = [(String?,Int,String,String,Int)] ()//IMAGE URL/INNER ID/VALUE/NAME/STATUS
+    var homeSelectionDetails = [(Int,[(String?,Int,String,String,Int)],Int,String?,String)] () //MENU ID/SUB_MENU(IMAGE/INNER ID/VALUE/NAME/STATUS)/MENU ENABLE/ MENU ACTION IMAGE/IS ARROW
+    
+    
+    //    var retailVerticalDetails  = [(UIImage?,UIImage?,UIImage?, Bool,String,Int,Int)]()//UNSELECTED IMAGE/UNSELECTED IMAGE/SELECTED IMAGE/ BOOL/ VALUE / STATUS
+    var retailVerticalDetails  = [(String?,String?,String?, Bool,String,Int,Int)]()//UNSELECTED IMAGE/UNSELECTED IMAGE/SELECTED IMAGE/ BOOL/ VALUE / STATUS
+    
+    
+    
+    
+    var requestType : RequestType = .post{
+        didSet{
+            switch requestType{
+            case .get:
+                
+                ///MARK: GETTING HOME SELECTION MENU DETAILS FROM SERVER.
+                self.showActivity(title: "Loading")
+                getDeviceId = defaultsToStoreDeviceId.string(forKey: "deviceId")
+                guard let getDeviceId = getDeviceId else {
+                    
+                    self.showDisconnectAlert(title: "Invalid Device Id", message: "Problem in getting device Id!")
+                    return
+                }
+                getModelToRequestHomeDetails = ModelToRequestHomeDetails(getDeviceId: getDeviceId, getPostalCode: "")
+                
+                DispatchQueue.global(qos: .userInitiated).async() {
+                    
+                    self.getHomeControllerVM.getHomeControllerDetails(postRequest: HelperClass.shared.getHomeDetails, sendDataModel: self.getModelToRequestHomeDetails, vc: self, completion: { [self] in
+                        //----------
+                        //                        MARK: OLD IMPLEMENTATION 6-3-2021
+                        
+                        //                        getMenu = getHomeControllerVM.getHomeControllerDetails.status?.Menu
+                        //
+                        //                        for i in 0...6{
+                        //                            homeSelectionDetails[i].1 = getMenu[i].val ?? "no value"
+                        //                        }
+                        //
+                        //                        if let getPostal = getPostal{
+                        //                            homeSelectionDetails[0].1 = getPostal
+                        //                            toShowPostalOverSwitchng = getPostal
+                        //                        }
+                        //
+                        //                        if let getDeliveryAddress = getDeliveryAddress{
+                        //                            homeSelectionDetails[4].1 = getDeliveryAddress
+                        //                            toShowDeliverAddrssOverSwitchng = getDeliveryAddress
+                        //                        }
+                        
+                        
+                        //---------------
+                        
+                        ///MARK: NEW IMPLEMENTATION 6-3-2021
+                        
+                        if let getStatus = getHomeControllerVM.getHomeControllerDetails.status{
+                            if let getMenu = getStatus.Menu{
+                                
+                                for i in getMenu{
+                                    
+                                    if let getSubMenu = i.Sub_Menu{
+                                        for j in getSubMenu{
+                                            
+                                            subMenu.append((j.Imagepath!, j.Innerid!, j.Value!, j.Name!, j.status!))
+                                            
+                                        }
+                                        
+                                    }else{
+                                        showDisconnectAlert(title: "Error!", message: "Problem in getting Sub_Menu for Home Details")
+                                    }
+                                    
+                                    
+                                    ///MARK GETTING SWITCH ACTION ICON FOR CELL
+                                    
+                                    if let getMenuId  = i.Menu_Id,let getMenuEnabel = i.Menu_Enable, let getMenuAction = i.Menu_Action,let getArrow = i.Is_Arrow{
+                                        
+                                        
+                                        homeSelectionDetails.append((getMenuId, subMenu,getMenuEnabel, getMenuAction,getArrow))
+                                        print(i.Menu_Id,subMenu.count)
+                                        subMenu.removeAll()
+                                        
+                                    }else{
+                                        showDisconnectAlert(title: "Error!", message: "Problem in getting Menu Id,Menu Enable,Menu Action")
+                                    }
+                                    
+                                }
+                                
+                                
+                                
+                                ///MARK ADDING DEFAULT VALUE TO UPDATE HOME SCREEN MODEL
+                                
+                                if let getPostal = getPostal{
+                                    homeSelectionDetails[0].1[0].3 = getPostal
+                                    toShowPostalOverSwitchng = getPostal
+                                }
+                                
+                                
+                                
+                                
+                                if let getDeliveryAddress = getDeliveryAddress{
+                                    homeSelectionDetails[4].1[0].3 = getDeliveryAddress
+                                    toShowDeliverAddrssOverSwitchng = getDeliveryAddress
+                                }
+                                
+                                
+                                removeActivity()
+                                self.performSegue(withIdentifier: "ShowHomeScreen", sender: self)
+                                
+                            }else{
+                                showDisconnectAlert(title: "Error!", message: "Problem in getting Menu for Home Details")
+                            }
+                        }else{
+                            showDisconnectAlert(title: "Error!", message: "Problem in getting Status for Home Details")
+                        }
+                        
+                    })
+                }
+                
+            case .post:
+                
+                print("")
+                
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     ///mark: outlet
     @IBOutlet weak var lblWelcome: UILabel!
     @IBOutlet weak var lblTitle: UILabel!
@@ -180,7 +329,7 @@ class LoginController: UIViewController {
         //        }
     }
     @IBAction func btnShowHome(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        requestType = .get
     }
     @IBAction func btnInfo(_ sender: UIButton) {
         UIView.animate(withDuration: 1, animations: { [self] in
@@ -202,7 +351,6 @@ class LoginController: UIViewController {
     }
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -210,9 +358,21 @@ class LoginController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "ShowHomeScreen" else{
+            return
+        }
+     
+        let getHomeController = segue.destination as! HomeScreenController
+        getHomeController.homeSelectionDetails =  homeSelectionDetails
+
+    }
+    
+    
     
     ///mark: functions
     func initialConfig() {
+        getHomeControllerVM = HomeControllerViewModel()
         getDone = self
         self.edtMailPassword.addDoneButtonOnKeyboard()
         self.edtRepeatPswdPassword.addDoneButtonOnKeyboard()
@@ -286,6 +446,91 @@ class LoginController: UIViewController {
 
 
 ///mark: extension
+
+
+extension LoginController{
+    func showActivity(title: String) {
+        
+        DispatchQueue.main.async {
+            self.strLabel.removeFromSuperview()
+            self.activityIndicator.removeFromSuperview()
+            self.effectView.removeFromSuperview()
+            
+            self.strLabel = UILabel(frame: CGRect(x: 50, y: 0, width: 160, height: 46))
+            self.strLabel.text = title
+            self.strLabel.font = .systemFont(ofSize: 14, weight: .medium)
+            self.strLabel.textColor = UIColor(white: 0.9, alpha: 0.7)
+            
+            self.effectView.frame = CGRect(x: self.view.frame.midX - self.strLabel.frame.width/2, y: self.view.frame.midY - self.strLabel.frame.height/2 , width: 160, height: 46)
+            self.effectView.layer.cornerRadius = 15
+            self.effectView.layer.masksToBounds = true
+            
+            self.activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .white)
+            self.activityIndicator.frame = CGRect(x: 0, y: 0, width: 46, height: 46)
+            self.activityIndicator.isUserInteractionEnabled = false
+            self.view.isUserInteractionEnabled = false
+            self.activityIndicator.startAnimating()
+            
+            
+            self.effectView.contentView.addSubview(self.activityIndicator)
+            self.effectView.contentView.addSubview(self.strLabel)
+            self.view.addSubview(self.effectView)
+            
+        }
+        
+    }
+    func removeActivity() {
+        
+        DispatchQueue.main.async {
+            
+            self.activityIndicator.stopAnimating()
+            self.effectView.removeFromSuperview()
+            self.activityIndicator.removeFromSuperview()
+            self.view.isUserInteractionEnabled = true
+            
+        }
+        
+    }
+    func showToas(message : String, seconds: Double){
+        
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+            alert.view.backgroundColor = .black
+            alert.view.alpha = 0.5
+            alert.view.layer.cornerRadius = 15
+            self.present(alert, animated: true)
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds) {
+                alert.dismiss(animated: true)
+            }
+            
+        }
+        
+    }
+    func showDisconnectAlert(title : String, message: String){
+        
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+            
+            // add an action (button)
+            let OkAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default){
+                UIAlertAction in
+                
+            }
+            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel) {
+                UIAlertAction in
+                
+            }
+            alert.addAction(OkAction)
+            alert.addAction(cancelAction)
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+    }
+}
+
+
+
 
 extension LoginController: alertButtonclickEvent{
     func alertButtonClickEvent(Btn: UIButton) {
@@ -365,6 +610,12 @@ extension LoginController{
 extension LoginController: UITextFieldDelegate{
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textFieldTag = textField.tag
+    }
+}
+
+extension LoginController: showError{
+    func showError(getError: String, getMessage: String) {
+        showDisconnectAlert(title: getError, message: getMessage)
     }
 }
 

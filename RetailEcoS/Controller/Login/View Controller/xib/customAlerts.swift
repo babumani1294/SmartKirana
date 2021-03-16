@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+@IBDesignable
 class customAlerts: UIView {
 
     ///mark: property
@@ -19,7 +21,6 @@ class customAlerts: UIView {
     @IBOutlet weak var viewAlert: UIView!
     @IBOutlet weak var lblAlertMessage: UILabel!
     @IBOutlet weak var lblAlertTitle: UILabel!
-    
     @IBOutlet weak var btnErrorInfo: UIButton!
     
     

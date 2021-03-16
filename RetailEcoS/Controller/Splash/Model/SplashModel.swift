@@ -21,6 +21,37 @@ class ModelToGiveCountry: Codable{
     }
 }
 
+class ModelToGiveCountryForPhoneCode: Codable{
+    
+    var Country: String?
+    
+    init(getCountry: String) {
+        self.Country = getCountry
+    }
+}
+
+
+
+class ModelToFetchPhoneCodeDetails: Codable {
+    var session : PhoneSession
+    var status : PhoneStatus
+}
+
+class PhoneSession : Codable{
+    var SessionMessage : String
+    var SessionResult : Int
+}
+
+class PhoneStatus : Codable{
+   
+    var Message : String?
+    var phone_code: String?
+    var Result : Int?
+}
+
+
+
+
 
 
 class ModelToFetchCompanyDetails: Codable {
@@ -35,17 +66,13 @@ class Session : Codable{
 
 class Status : Codable{
     var Country_flag : String?
+    var Postal_Code_Format : String?
     var Message : String?
+    var Registered_User : String?
+    var Country_Name : String?
+    var First_Time_User : String?
     var splash: [SplashList]?
     var Result : Int?
-    
-//    init(getCountry: String,Message: String,splash: [SplashList],result: Int) {
-//        self.Country_flag = getCountry
-//        self.Message = Message
-//        self.splash = splash
-//        self.Result = result
-//    }
-    
 }
 
 class SplashList : Codable{
@@ -53,14 +80,8 @@ class SplashList : Codable{
     var Title : String?
     var Id : Int?
     var Logo: String?
-//    init(Lapse_Time: String,Title: String,Id: Int,Logo: String) {
-//        self.Lapse_Time = Lapse_Time
-//        self.Title = Title
-//        self.Id = Id
-//        self.Logo = Logo
-//    }
-    
 }
+
 
 
 
@@ -862,6 +883,693 @@ class ViewPort: Codable {
 //         "plus_code" : {
 //            "compound_code" : "QHPV+8C Tenderloin, San Francisco, CA, USA",
 //            "global_code" : "849VQHPV+8C"
+//         },
+//         "types" : [ "plus_code" ]
+//      }
+//   ],
+//   "status" : "OK"
+//}
+
+
+
+
+
+//---------
+
+//for chennai 78
+
+//{
+//   "plus_code" : {
+//      "compound_code" : "25HR+8W Chennai, Tamil Nadu, India",
+//      "global_code" : "7M5225HR+8W"
+//   },
+//   "results" : [
+//      {
+//         "address_components" : [
+//            {
+//               "long_name" : "33",
+//               "short_name" : "33",
+//               "types" : [ "premise" ]
+//            },
+//            {
+//               "long_name" : "Doctor Khanu Nagar 4th Street",
+//               "short_name" : "Dr Khanu Nagar 4th St",
+//               "types" : [ "route" ]
+//            },
+//            {
+//               "long_name" : "Indira Nagar",
+//               "short_name" : "Indira Nagar",
+//               "types" : [ "political", "sublocality", "sublocality_level_3" ]
+//            },
+//            {
+//               "long_name" : "Indira Nagar",
+//               "short_name" : "Indira Nagar",
+//               "types" : [ "political", "sublocality", "sublocality_level_2" ]
+//            },
+//            {
+//               "long_name" : "Jaffarkhanpet",
+//               "short_name" : "Jaffarkhanpet",
+//               "types" : [ "political", "sublocality", "sublocality_level_1" ]
+//            },
+//            {
+//               "long_name" : "Chennai",
+//               "short_name" : "Chennai",
+//               "types" : [ "locality", "political" ]
+//            },
+//            {
+//               "long_name" : "Tiruvallur",
+//               "short_name" : "Tiruvallur",
+//               "types" : [ "administrative_area_level_2", "political" ]
+//            },
+//            {
+//               "long_name" : "Tamil Nadu",
+//               "short_name" : "Tamil Nadu",
+//               "types" : [ "administrative_area_level_1", "political" ]
+//            },
+//            {
+//               "long_name" : "India",
+//               "short_name" : "IN",
+//               "types" : [ "country", "political" ]
+//            },
+//            {
+//               "long_name" : "600078",
+//               "short_name" : "600078",
+//               "types" : [ "postal_code" ]
+//            }
+//         ],
+//         "formatted_address" : "33, Dr Khanu Nagar 4th St, Indira Nagar, Jaffarkhanpet, Chennai, Tamil Nadu 600078, India",
+//         "geometry" : {
+//            "location" : {
+//               "lat" : 13.0283527,
+//               "lng" : 80.1922931
+//            },
+//            "location_type" : "ROOFTOP",
+//            "viewport" : {
+//               "northeast" : {
+//                  "lat" : 13.0297016802915,
+//                  "lng" : 80.19364208029151
+//               },
+//               "southwest" : {
+//                  "lat" : 13.0270037197085,
+//                  "lng" : 80.1909441197085
+//               }
+//            }
+//         },
+//         "place_id" : "ChIJAfjA8CtnUjoRY9eCHKt5skc",
+//         "plus_code" : {
+//            "compound_code" : "25HR+8W Chennai, Tamil Nadu, India",
+//            "global_code" : "7M5225HR+8W"
+//         },
+//         "types" : [ "street_address" ]
+//      },
+//      {
+//         "address_components" : [
+//            {
+//               "long_name" : "4th Street",
+//               "short_name" : "4th St",
+//               "types" : [ "route" ]
+//            },
+//            {
+//               "long_name" : "Indira Nagar",
+//               "short_name" : "Indira Nagar",
+//               "types" : [ "political", "sublocality", "sublocality_level_3" ]
+//            },
+//            {
+//               "long_name" : "Kanu Nagar",
+//               "short_name" : "Kanu Nagar",
+//               "types" : [ "political", "sublocality", "sublocality_level_2" ]
+//            },
+//            {
+//               "long_name" : "Manapakkam",
+//               "short_name" : "Manapakkam",
+//               "types" : [ "political", "sublocality", "sublocality_level_1" ]
+//            },
+//            {
+//               "long_name" : "Chennai",
+//               "short_name" : "Chennai",
+//               "types" : [ "locality", "political" ]
+//            },
+//            {
+//               "long_name" : "Chennai",
+//               "short_name" : "Chennai",
+//               "types" : [ "administrative_area_level_2", "political" ]
+//            },
+//            {
+//               "long_name" : "Tamil Nadu",
+//               "short_name" : "TN",
+//               "types" : [ "administrative_area_level_1", "political" ]
+//            },
+//            {
+//               "long_name" : "India",
+//               "short_name" : "IN",
+//               "types" : [ "country", "political" ]
+//            },
+//            {
+//               "long_name" : "600089",
+//               "short_name" : "600089",
+//               "types" : [ "postal_code" ]
+//            }
+//         ],
+//         "formatted_address" : "4th St, Indira Nagar, Kanu Nagar, Manapakkam, Chennai, Tamil Nadu 600089, India",
+//         "geometry" : {
+//            "bounds" : {
+//               "northeast" : {
+//                  "lat" : 13.0283037,
+//                  "lng" : 80.19240549999999
+//               },
+//               "southwest" : {
+//                  "lat" : 13.0282587,
+//                  "lng" : 80.19116219999999
+//               }
+//            },
+//            "location" : {
+//               "lat" : 13.028269,
+//               "lng" : 80.1917844
+//            },
+//            "location_type" : "GEOMETRIC_CENTER",
+//            "viewport" : {
+//               "northeast" : {
+//                  "lat" : 13.0296301802915,
+//                  "lng" : 80.1931328302915
+//               },
+//               "southwest" : {
+//                  "lat" : 13.0269322197085,
+//                  "lng" : 80.1904348697085
+//               }
+//            }
+//         },
+//         "place_id" : "ChIJ0Q_17StnUjoRrEXyGQxoQmU",
+//         "types" : [ "route" ]
+//      },
+//      {
+//         "address_components" : [
+//            {
+//               "long_name" : "Indira Nagar",
+//               "short_name" : "Indira Nagar",
+//               "types" : [ "political", "sublocality", "sublocality_level_3" ]
+//            },
+//            {
+//               "long_name" : "Kanu Nagar",
+//               "short_name" : "Kanu Nagar",
+//               "types" : [ "political", "sublocality", "sublocality_level_2" ]
+//            },
+//            {
+//               "long_name" : "Manapakkam",
+//
+//               "short_name" : "Manapakkam",
+//               "types" : [ "political", "sublocality", "sublocality_level_1" ]
+//            },
+//            {
+//               "long_name" : "Chennai",
+//               "short_name" : "Chennai",
+//               "types" : [ "locality", "political" ]
+//            },
+//            {
+//               "long_name" : "Chennai",
+//               "short_name" : "Chennai",
+//               "types" : [ "administrative_area_level_2", "political" ]
+//            },
+//            {
+//               "long_name" : "Tamil Nadu",
+//               "short_name" : "TN",
+//               "types" : [ "administrative_area_level_1", "political" ]
+//            },
+//            {
+//               "long_name" : "India",
+//               "short_name" : "IN",
+//               "types" : [ "country", "political" ]
+//            },
+//            {
+//               "long_name" : "600089",
+//               "short_name" : "600089",
+//               "types" : [ "postal_code" ]
+//            }
+//         ],
+//         "formatted_address" : "Indira Nagar, Kanu Nagar, Manapakkam, Chennai, Tamil Nadu 600089, India",
+//         "geometry" : {
+//            "bounds" : {
+//               "northeast" : {
+//                  "lat" : 13.0286912,
+//                  "lng" : 80.19335930000001
+//               },
+//               "southwest" : {
+//                  "lat" : 13.0278442,
+//                  "lng" : 80.19115979999999
+//               }
+//            },
+//            "location" : {
+//               "lat" : 13.0282653,
+//               "lng" : 80.1920398
+//            },
+//            "location_type" : "APPROXIMATE",
+//            "viewport" : {
+//               "northeast" : {
+//                  "lat" : 13.0296166802915,
+//                  "lng" : 80.19360853029151
+//               },
+//               "southwest" : {
+//                  "lat" : 13.0269187197085,
+//                  "lng" : 80.19091056970851
+//               }
+//            }
+//         },
+//         "place_id" : "ChIJ-TDx8CtnUjoRMi8UZVcZUX0",
+//         "types" : [ "political", "sublocality", "sublocality_level_3" ]
+//      },
+//      {
+//         "address_components" : [
+//            {
+//               "long_name" : "Bharathi Nagar",
+//               "short_name" : "Bharathi Nagar",
+//               "types" : [ "political", "sublocality", "sublocality_level_2" ]
+//            },
+//            {
+//               "long_name" : "Manapakkam",
+//               "short_name" : "Manapakkam",
+//               "types" : [ "political", "sublocality", "sublocality_level_1" ]
+//            },
+//            {
+//               "long_name" : "Chennai",
+//               "short_name" : "Chennai",
+//               "types" : [ "locality", "political" ]
+//            },
+//            {
+//               "long_name" : "Chennai",
+//               "short_name" : "Chennai",
+//               "types" : [ "administrative_area_level_2", "political" ]
+//            },
+//            {
+//               "long_name" : "Tamil Nadu",
+//               "short_name" : "TN",
+//               "types" : [ "administrative_area_level_1", "political" ]
+//            },
+//            {
+//               "long_name" : "India",
+//               "short_name" : "IN",
+//               "types" : [ "country", "political" ]
+//            },
+//            {
+//               "long_name" : "600089",
+//               "short_name" : "600089",
+//               "types" : [ "postal_code" ]
+//            }
+//         ],
+//         "formatted_address" : "Bharathi Nagar, Manapakkam, Chennai, Tamil Nadu 600089, India",
+//         "geometry" : {
+//            "bounds" : {
+//               "northeast" : {
+//                  "lat" : 13.0313729,
+//                  "lng" : 80.1934629
+//               },
+//               "southwest" : {
+//                  "lat" : 13.028289,
+//                  "lng" : 80.1911891
+//               }
+//            },
+//            "location" : {
+//               "lat" : 13.0297453,
+//               "lng" : 80.1924248
+//            },
+//            "location_type" : "APPROXIMATE",
+//            "viewport" : {
+//               "northeast" : {
+//                  "lat" : 13.0313729,
+//                  "lng" : 80.19367498029152
+//               },
+//               "southwest" : {
+//                  "lat" : 13.028289,
+//                  "lng" : 80.19097701970851
+//               }
+//            }
+//         },
+//         "place_id" : "ChIJG_AJzitnUjoRZ7DBia7tAv4",
+//         "types" : [ "political", "sublocality", "sublocality_level_2" ]
+//      },
+//      {
+//         "address_components" : [
+//            {
+//               "long_name" : "Nesapakkam",
+//               "short_name" : "Nesapakkam",
+//               "types" : [ "political", "sublocality", "sublocality_level_1" ]
+//            },
+//            {
+//               "long_name" : "Chennai",
+//               "short_name" : "Chennai",
+//               "types" : [ "locality", "political" ]
+//            },
+//            {
+//               "long_name" : "Chennai",
+//               "short_name" : "Chennai",
+//               "types" : [ "administrative_area_level_2", "political" ]
+//            },
+//            {
+//               "long_name" : "Tamil Nadu",
+//               "short_name" : "TN",
+//               "types" : [ "administrative_area_level_1", "political" ]
+//            },
+//            {
+//               "long_name" : "India",
+//               "short_name" : "IN",
+//               "types" : [ "country", "political" ]
+//            }
+//         ],
+//         "formatted_address" : "Nesapakkam, Chennai, Tamil Nadu, India",
+//         "geometry" : {
+//            "bounds" : {
+//               "northeast" : {
+//                  "lat" : 13.041935,
+//                  "lng" : 80.20301189999999
+//               },
+//               "southwest" : {
+//                  "lat" : 13.0276928,
+//                  "lng" : 80.18386199999999
+//               }
+//            },
+//            "location" : {
+//               "lat" : 13.0379385,
+//               "lng" : 80.1919681
+//            },
+//            "location_type" : "APPROXIMATE",
+//            "viewport" : {
+//               "northeast" : {
+//                  "lat" : 13.041935,
+//                  "lng" : 80.20301189999999
+//               },
+//               "southwest" : {
+//                  "lat" : 13.0276928,
+//                  "lng" : 80.18386199999999
+//               }
+//            }
+//         },
+//         "place_id" : "ChIJc23r5CphUjoRnXXO8d9fHAY",
+//         "types" : [ "political", "sublocality", "sublocality_level_1" ]
+//      },
+//      {
+//         "address_components" : [
+//            {
+//               "long_name" : "600089",
+//               "short_name" : "600089",
+//               "types" : [ "postal_code" ]
+//            },
+//            {
+//               "long_name" : "Chennai",
+//               "short_name" : "Chennai",
+//               "types" : [ "locality", "political" ]
+//            },
+//            {
+//               "long_name" : "Tiruvallur",
+//               "short_name" : "Tiruvallur",
+//               "types" : [ "administrative_area_level_2", "political" ]
+//            },
+//            {
+//               "long_name" : "Tamil Nadu",
+//               "short_name" : "TN",
+//               "types" : [ "administrative_area_level_1", "political" ]
+//            },
+//            {
+//               "long_name" : "India",
+//               "short_name" : "IN",
+//               "types" : [ "country", "political" ]
+//            }
+//         ],
+//         "formatted_address" : "Chennai, Tamil Nadu 600089, India",
+//         "geometry" : {
+//            "bounds" : {
+//               "northeast" : {
+//                  "lat" : 13.0365804,
+//                  "lng" : 80.2034645
+//               },
+//               "southwest" : {
+//                  "lat" : 13.0013716,
+//                  "lng" : 80.1695213
+//               }
+//            },
+//            "location" : {
+//               "lat" : 13.0180773,
+//               "lng" : 80.18702239999999
+//            },
+//            "location_type" : "APPROXIMATE",
+//            "viewport" : {
+//               "northeast" : {
+//                  "lat" : 13.0365804,
+//                  "lng" : 80.2034645
+//               },
+//               "southwest" : {
+//                  "lat" : 13.0013716,
+//                  "lng" : 80.1695213
+//               }
+//            }
+//         },
+//         "place_id" : "ChIJ513i6TJnUjoRbiM1D5tMZkc",
+//         "types" : [ "postal_code" ]
+//      },
+//      {
+//         "address_components" : [
+//            {
+//               "long_name" : "Chennai",
+//               "short_name" : "Chennai",
+//               "types" : [ "locality", "political" ]
+//            },
+//            {
+//               "long_name" : "Chennai",
+//               "short_name" : "Chennai",
+//               "types" : [ "administrative_area_level_2", "political" ]
+//            },
+//            {
+//               "long_name" : "Tamil Nadu",
+//               "short_name" : "TN",
+//               "types" : [ "administrative_area_level_1", "political" ]
+//            },
+//            {
+//               "long_name" : "India",
+//               "short_name" : "IN",
+//               "types" : [ "country", "political" ]
+//            }
+//         ],
+//         "formatted_address" : "Chennai, Tamil Nadu, India",
+//         "geometry" : {
+//            "bounds" : {
+//               "northeast" : {
+//                  "lat" : 13.2611661,
+//                  "lng" : 80.33632279999999
+//               },
+//               "southwest" : {
+//                  "lat" : 12.8338848,
+//                  "lng" : 80.0817007
+//               }
+//            },
+//            "location" : {
+//               "lat" : 13.0826802,
+//               "lng" : 80.27071840000001
+//            },
+//            "location_type" : "APPROXIMATE",
+//            "viewport" : {
+//               "northeast" : {
+//                  "lat" : 13.2611661,
+//                  "lng" : 80.33632279999999
+//               },
+//               "southwest" : {
+//                  "lat" : 12.8338848,
+//                  "lng" : 80.0817007
+//               }
+//            }
+//         },
+//         "place_id" : "ChIJYTN9T-plUjoRM9RjaAunYW4",
+//         "types" : [ "locality", "political" ]
+//      },
+//      {
+//         "address_components" : [
+//            {
+//               "long_name" : "Tiruvallur",
+//               "short_name" : "Tiruvallur",
+//               "types" : [ "administrative_area_level_2", "political" ]
+//            },
+//            {
+//               "long_name" : "Tamil Nadu",
+//               "short_name" : "TN",
+//               "types" : [ "administrative_area_level_1", "political" ]
+//            },
+//            {
+//               "long_name" : "India",
+//               "short_name" : "IN",
+//               "types" : [ "country", "political" ]
+//            }
+//         ],
+//         "formatted_address" : "Tiruvallur, Tamil Nadu, India",
+//         "geometry" : {
+//            "bounds" : {
+//               "northeast" : {
+//                  "lat" : 13.5653538,
+//                  "lng" : 80.3533479
+//               },
+//               "southwest" : {
+//                  "lat" : 12.927394,
+//                  "lng" : 79.28749569999999
+//               }
+//            },
+//            "location" : {
+//               "lat" : 13.2544335,
+//               "lng" : 80.0087746
+//            },
+//            "location_type" : "APPROXIMATE",
+//            "viewport" : {
+//               "northeast" : {
+//                  "lat" : 13.5653538,
+//                  "lng" : 80.3533479
+//               },
+//               "southwest" : {
+//                  "lat" : 12.927394,
+//                  "lng" : 79.28749569999999
+//               }
+//            }
+//         },
+//         "place_id" : "ChIJdQx5zBCQUjoR-L9nLEtv1I0",
+//         "types" : [ "administrative_area_level_2", "political" ]
+//      },
+//      {
+//         "address_components" : [
+//            {
+//               "long_name" : "Tamil Nadu",
+//               "short_name" : "TN",
+//               "types" : [ "administrative_area_level_1", "political" ]
+//            },
+//            {
+//               "long_name" : "India",
+//               "short_name" : "IN",
+//               "types" : [ "country", "political" ]
+//            }
+//         ],
+//         "formatted_address" : "Tamil Nadu, India",
+//         "geometry" : {
+//            "bounds" : {
+//               "northeast" : {
+//                  "lat" : 13.496666,
+//                  "lng" : 80.3464511
+//               },
+//               "southwest" : {
+//                  "lat" : 8.0690069,
+//                  "lng" : 76.23055409999999
+//               }
+//            },
+//            "location" : {
+//               "lat" : 11.1271225,
+//               "lng" : 78.6568942
+//            },
+//            "location_type" : "APPROXIMATE",
+//            "viewport" : {
+//               "northeast" : {
+//                  "lat" : 13.496666,
+//                  "lng" : 80.3464511
+//               },
+//               "southwest" : {
+//                  "lat" : 8.0690069,
+//                  "lng" : 76.23055409999999
+//               }
+//            }
+//         },
+//         "place_id" : "ChIJM5YYsYLFADsR8GEzRsx1lFU",
+//         "types" : [ "administrative_area_level_1", "political" ]
+//      },
+//      {
+//         "address_components" : [
+//            {
+//               "long_name" : "India",
+//               "short_name" : "IN",
+//               "types" : [ "country", "political" ]
+//            }
+//         ],
+//         "formatted_address" : "India",
+//         "geometry" : {
+//            "bounds" : {
+//               "northeast" : {
+//                  "lat" : 35.513327,
+//                  "lng" : 97.39535869999999
+//               },
+//               "southwest" : {
+//                  "lat" : 6.4626999,
+//                  "lng" : 68.1097
+//               }
+//            },
+//            "location" : {
+//               "lat" : 20.593684,
+//               "lng" : 78.96288
+//            },
+//            "location_type" : "APPROXIMATE",
+//            "viewport" : {
+//               "northeast" : {
+//                  "lat" : 35.513327,
+//                  "lng" : 97.39535869999999
+//               },
+//               "southwest" : {
+//                  "lat" : 6.4626999,
+//                  "lng" : 68.1097
+//               }
+//            }
+//         },
+//         "place_id" : "ChIJkbeSa_BfYzARphNChaFPjNc",
+//         "types" : [ "country", "political" ]
+//      },
+//      {
+//         "address_components" : [
+//            {
+//               "long_name" : "25HR+8W",
+//               "short_name" : "25HR+8W",
+//               "types" : [ "plus_code" ]
+//            },
+//            {
+//               "long_name" : "Chennai",
+//               "short_name" : "Chennai",
+//               "types" : [ "locality", "political" ]
+//            },
+//            {
+//               "long_name" : "Chennai",
+//               "short_name" : "Chennai",
+//               "types" : [ "administrative_area_level_2", "political" ]
+//            },
+//            {
+//               "long_name" : "Tamil Nadu",
+//               "short_name" : "TN",
+//               "types" : [ "administrative_area_level_1", "political" ]
+//            },
+//            {
+//               "long_name" : "India",
+//               "short_name" : "IN",
+//               "types" : [ "country", "political" ]
+//            }
+//         ],
+//         "formatted_address" : "25HR+8W Chennai, Tamil Nadu, India",
+//         "geometry" : {
+//            "bounds" : {
+//               "northeast" : {
+//                  "lat" : 13.028375,
+//                  "lng" : 80.192375
+//               },
+//               "southwest" : {
+//                  "lat" : 13.02825,
+//                  "lng" : 80.19225
+//               }
+//            },
+//            "location" : {
+//               "lat" : 13.0283707,
+//               "lng" : 80.1923446
+//            },
+//            "location_type" : "ROOFTOP",
+//            "viewport" : {
+//               "northeast" : {
+//                  "lat" : 13.0296614802915,
+//                  "lng" : 80.1936614802915
+//
+//               },
+//               "southwest" : {
+//                  "lat" : 13.0269635197085,
+//                  "lng" : 80.19096351970849
+//               }
+//            }
+//         },
+//         "place_id" : "GhIJSlS5moYOKkAR-6O5X08MVEA",
+//         "plus_code" : {
+//            "compound_code" : "25HR+8W Chennai, Tamil Nadu, India",
+//            "global_code" : "7M5225HR+8W"
 //         },
 //         "types" : [ "plus_code" ]
 //      }
