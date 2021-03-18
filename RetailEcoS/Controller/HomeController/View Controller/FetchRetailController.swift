@@ -11,8 +11,8 @@ class FetchRetailController: UIViewController {
     
     ///MARK: PROPERTY
     let minRowHeight: CGFloat = 50.0
-//    var fetchVerticalDetails  =  [(UIImage?,UIImage?,UIImage?, Bool,String,Int,Int)]()//UNSELECTED IMAGE/UNSELECTED IMAGE/SELECTED IMAGE/FALSE/RETAIL NAME/ID/STATUS
-
+    //    var fetchVerticalDetails  =  [(UIImage?,UIImage?,UIImage?, Bool,String,Int,Int)]()//UNSELECTED IMAGE/UNSELECTED IMAGE/SELECTED IMAGE/FALSE/RETAIL NAME/ID/STATUS
+    
     var fetchVerticalDetails  =  [(String?,String?,String?, Bool,String,Int,Int)]()//UNSELECTED IMAGE/UNSELECTED IMAGE/SELECTED IMAGE/FALSE/RETAIL NAME/ID/STATUS
     var getSelectedRetailId: Int?
     var updateRetailDetails: ModelUpdateRetailDetails!
@@ -57,9 +57,9 @@ class FetchRetailController: UIViewController {
                                     if let getSubMenu = i.Sub_Menu{
                                         for j in getSubMenu{
                                             
-                                         
-                                                    subMenu.append(( j.Imagepath!, j.Innerid!, j.Value!, j.Name!, j.status!))
-                                       
+                                            
+                                            subMenu.append(( j.Imagepath!, j.Innerid!, j.Value!, j.Name!, j.status!))
+                                            
                                             
                                         }
                                         
@@ -72,11 +72,11 @@ class FetchRetailController: UIViewController {
                                     
                                     if let getMenuId  = i.Menu_Id,let getMenuEnabel = i.Menu_Enable, let getMenuAction = i.Menu_Action,let getArrow = i.Is_Arrow{
                                         
-                                      
-                                            homeSelectionDetails.append((getMenuId, subMenu,getMenuEnabel, getMenuAction,getArrow))
-                                            print(i.Menu_Id,subMenu.count)
-                                            subMenu.removeAll()
-                                            
+                                        
+                                        homeSelectionDetails.append((getMenuId, subMenu,getMenuEnabel, getMenuAction,getArrow))
+                                        print(i.Menu_Id,subMenu.count)
+                                        subMenu.removeAll()
+                                        
                                         
                                     }else{
                                         showError(getError: "Error!", getMessage: "Problem in getting Menu Id,Menu Enable,Menu Action")
@@ -135,6 +135,7 @@ class FetchRetailController: UIViewController {
     @IBOutlet weak var retailSelectionTV: UITableView!
     @IBOutlet weak var btnGoBack: UIButton!
     
+    @IBOutlet weak var imgHeaderLogo: UIImageView!
     
     ///MARK: ACTION
     @IBAction func btnGoBack(_ sender: UIButton) {
@@ -204,6 +205,7 @@ class FetchRetailController: UIViewController {
     }
     
     func intialConfig() {
+        imgHeaderLogo.sd_setImage(with: URL(string: HeaderLogo ?? ""))
         getHomeControllerVM = HomeControllerViewModel()
         getRetailViewModel = RetailSelectionViewModel()
         retailSelectionTV?.register(HomeSelectionCell.nib, forCellReuseIdentifier: HomeSelectionCell.identifier)
@@ -227,12 +229,12 @@ extension FetchRetailController: UITableViewDelegate,UITableViewDataSource{
         if let cell = tableView.dequeueReusableCell(withIdentifier: HomeSelectionCell.identifier, for: indexPath) as? HomeSelectionCell {
             if fetchVerticalDetails[indexPath.row].3{
                 cell.lblRetail.text = fetchVerticalDetails[indexPath.row].4
-//                cell.imgCell.image = fetchVerticalDetails[indexPath.row].0
+                //                cell.imgCell.image = fetchVerticalDetails[indexPath.row].0
                 cell.imgCell.sd_setImage(with: URL(string: fetchVerticalDetails[indexPath.row].0 ?? ""))
                 cell.lblRetail.textColor = UIColor.black
             }else{
                 cell.lblRetail.text = fetchVerticalDetails[indexPath.row].4
-//                cell.imgCell.image = fetchVerticalDetails[indexPath.row].0
+                //                cell.imgCell.image = fetchVerticalDetails[indexPath.row].0
                 cell.imgCell.sd_setImage(with: URL(string: fetchVerticalDetails[indexPath.row].0 ?? ""))
                 cell.lblRetail.textColor = UIColor.lightGray
                 

@@ -109,21 +109,17 @@ class CustomAddressEdit: UIView,letterPadAction,UIGestureRecognizerDelegate, let
         
         if sender.isSelected{
             sender.setImage(UIImage(named: "imgAddressSelect"), for: .normal)
-            if let getFinalDeviceId = storedDeviceId,let getFinalCountryId = storedCountryId{
-                lblCcode.text = getFinalCountryId
+            if let getFinalDeviceId = storedDeviceId{
                 lblMnumber.text = getFinalDeviceId
             }else{
-                lblCcode.text = ""
                 lblMnumber.text = ""
             }
             donePressed.DonePressed()
         }else{
             sender.setImage(UIImage(named: "imgAddressUnselect"), for: .normal)
-            if let getFinalDeviceId = receivedDeviceId,let getFinalCountryId = receivedCountryId{
-                lblCcode.text = getFinalCountryId
+            if let getFinalDeviceId = receivedDeviceId{
                 lblMnumber.text = getFinalDeviceId
             }else{
-                lblCcode.text = ""
                 lblMnumber.text = ""
             }
             donePressed.DonePressed()

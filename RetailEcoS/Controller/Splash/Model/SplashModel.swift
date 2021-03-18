@@ -43,7 +43,6 @@ class PhoneSession : Codable{
 }
 
 class PhoneStatus : Codable{
-   
     var Message : String?
     var phone_code: String?
     var Result : Int?

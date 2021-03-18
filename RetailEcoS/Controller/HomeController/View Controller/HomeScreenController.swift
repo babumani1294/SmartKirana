@@ -9,7 +9,7 @@ import UIKit
 import SDWebImage
 
 
-var isAddressEditDetailChanged = false
+var isAddressEditDetailChanged = true
 var getUpdateHomeDetails = [getUpdateToHomeDetails]()
 class HomeScreenController: UIViewController {
     ///MARK: OUTLET
@@ -26,6 +26,7 @@ class HomeScreenController: UIViewController {
     @IBOutlet weak var imgHome: UIImageView!
     @IBOutlet weak var customAddressEdit: CustomAddressEdit!
     @IBOutlet weak var viewCustomAlert: customAlerts!
+    @IBOutlet weak var imgHeaderLogo: UIImageView!
     
     @IBOutlet weak var imgTimer: UIImageView!
     @IBOutlet weak var btnTimer: UIButton!
@@ -72,7 +73,7 @@ class HomeScreenController: UIViewController {
     var retailVerticalDetails  : [(String?,String?,String?, Bool,String,Int,Int)]?
     
     
-    var getRequestType = (false,false,false)//requestCountries/reqCountryAddress/reqCountryTime
+    var getRequestType = (false,false,false,false)//requestCountries/reqCountryAddress/reqCountryTime/requestCountryPhoneCode
     var getCountryFlagName = [(UIImage?,String,String)]()//countryImg/countryName/countryPostal
     var getTrackCountryChange : (Data?,String?)
     var homeSelectionDetails = [(Int,[(String?,Int,String,String,Int)],Int,String?,String)] () {
@@ -94,8 +95,8 @@ class HomeScreenController: UIViewController {
     var getHomeControllerVM : HomeControllerViewModel!
     //    var getUpdateHomeDetails = [getUpdateToHomeDetails]()
     var getRequestFetchVerticalOfType: ModelToRequestRetailDetailsOfType!
-    
-    
+    var getModelToGiveCountryForPhoneCode : ModelToGiveCountryForPhoneCode!
+    var getSplashViewModel : SplashViewModel!
     var countryNameModel = [CountryInfoModel]()
     
     var alphabeticList = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
@@ -126,7 +127,6 @@ class HomeScreenController: UIViewController {
                         
                         self.getPostalCodeFormats.removeAll()
                         for (index,element) in self.countryNameModel.enumerated(){
-                            print(index, element.countryPostalCodeFormat)
                             var getPostalCode : String = ""
                             if let getPostalFormat = element.countryPostalCodeFormat{
                                 for (index,elemen) in getPostalFormat.enumerated(){
@@ -138,7 +138,6 @@ class HomeScreenController: UIViewController {
                                         getPostalCode += "A"
                                     }
                                 }
-                                print(getPostalCode)
                                 self.getPostalCodeFormats.append(getPostalCode)
                             }else{
                                 self.showError(getError: "Error!", getMessage: "Problem in getting Postal Formats")
@@ -155,10 +154,10 @@ class HomeScreenController: UIViewController {
                         ///TO CHECK ADDRESS FROM OUR SERVER ON LOAD WITH INITIAL POSTAL CODE.
                         
                         
-                        print(String(self.getFinalPostalCode))
+                        
                         self.getFinalPostalCode.removeAll()
                         self.getFinalPostalCode = Array(toShowPostalOverSwitchng)
-                        print(String(self.getFinalPostalCode))
+                        
                         if self.getPostalCodeFormats.count != 0{
                             let contains = self.getPostalCodeFormats.contains(where: {$0 == String(self.getFinalPostalCode)})
                             
@@ -168,6 +167,7 @@ class HomeScreenController: UIViewController {
                                 self.getRequestType.0 = false
                                 self.getRequestType.1 = true
                                 self.getRequestType.2 = false
+                                self.getRequestType.3 = false
                                 self.removeActivity()
                                 self.requestType = .get
                             }
@@ -194,9 +194,9 @@ class HomeScreenController: UIViewController {
                                 
                                 for i in self.getHomeControllerVM.getCountryAddress.results{
                                     
-                                    self.homeSelectionDetails[4].1[0].3 = i?.formatted_address ?? "not found"
-                                    self.homeSelectionDetails[4].1[0].2 = i?.formatted_address ?? "not found"
-                                    toShowDeliverAddrssOverSwitchng = i?.formatted_address ?? "not found"
+                                    self.homeSelectionDetails[4].1[0].3 = i?.formatted_address ?? "NOT FOUND"
+                                    self.homeSelectionDetails[4].1[0].2 = i?.formatted_address ?? "NOT FOUND"
+                                    toShowDeliverAddrssOverSwitchng = i?.formatted_address ?? "NOT FOUND"
                                     
                                     self.getLongitude = i?.geometry?.location?.lng
                                     self.getLatitude = i?.geometry?.location?.lat
@@ -219,20 +219,18 @@ class HomeScreenController: UIViewController {
                                             
                                             if getAddressComponent != nil{
                                                 
-                                                var getFinalPhoneCode =  defaultsToStoreDeviceId.string(forKey: "phoneId")
-                                                var getFinalMobileNumber = defaultsToStoreDeviceId.string(forKey: "deviceId")
+                                                
                                                 getNo = ""
-                                                self.customAddressEdit.lblFirstName.text = "NOT FOUND"
-                                                self.customAddressEdit.lblLastName.text = "NOT FOUND"
-                                                self.customAddressEdit.lblAddress1.text = "NOT FOUND"
-                                                self.customAddressEdit.lblAddress2.text = "NOT FOUND"
-                                                self.customAddressEdit.lblLocality.text = "NOT FOUND"
-                                                self.customAddressEdit.lblCity.text = "NOT FOUND"
-                                                self.customAddressEdit.lblState.text = "NOT FOUND"
-                                                self.customAddressEdit.lblPostalCode.text = "NOT FOUND"
-                                                self.customAddressEdit.lblCcode.text = "NOT FOUND"
-                                                //                                                self.customAddressEdit.txtAcode.text = "NOT FOUND"
-                                                self.customAddressEdit.txtMnumber.text = "NOT FOUND"
+                                                self.customAddressEdit.lblFirstName.text = ""
+                                                self.customAddressEdit.lblLastName.text = ""
+                                                self.customAddressEdit.lblAddress1.text = ""
+                                                self.customAddressEdit.lblAddress2.text = ""
+                                                self.customAddressEdit.lblLocality.text = ""
+                                                self.customAddressEdit.lblCity.text = ""
+                                                self.customAddressEdit.lblState.text = ""
+                                                self.customAddressEdit.lblPostalCode.text = ""
+                                                self.customAddressEdit.receivedDeviceId = ""
+                                                self.customAddressEdit.lblMnumber.text = ""
                                                 
                                                 
                                                 for i in  self.customAddressEdit.btnGroup{
@@ -245,46 +243,47 @@ class HomeScreenController: UIViewController {
                                                     //mark:for getting address number and first address
                                                     if let premise = j?.types{
                                                         if premise.contains("premise"){
-                                                            getNo = j!.long_name ?? "not found"
+                                                            getNo = j!.long_name ?? "NOT FOUND"
                                                         }else if premise.contains("route"){
                                                             
-                                                            getAddress1 = j!.long_name ?? "not found"
+                                                            getAddress1 = j!.long_name ?? "NOT FOUND"
                                                             
                                                             if let getFinalno = getNo, let getFinalAddress = getAddress1{
-                                                                self.customAddressEdit.txtAddress1.text = getFinalno.uppercased()  + getFinalAddress.uppercased()
+                                                                self.customAddressEdit.lblAddress1.text = getFinalno.uppercased()  + getFinalAddress.uppercased()
                                                             }else{
-                                                                self.customAddressEdit.txtAddress1.text = getAddress1?.uppercased()
+                                                                self.customAddressEdit.lblAddress1.text = getAddress1?.uppercased()
                                                             }
                                                             
                                                             
                                                         }else if premise.contains("postal_code"){
                                                             //                                                            getPostal = j!.long_name ?? "not found"
-                                                            self.customAddressEdit.txtPostalCode.text = j!.long_name?.uppercased() ?? "not found"
+                                                            self.customAddressEdit.lblPostalCode.text = j!.long_name?.uppercased() ?? "NOT FOUND"
                                                         }else if premise.contains("political"){
                                                             
                                                             if premise.contains("locality"){
-                                                                self.customAddressEdit.txtCity.text = j!.long_name?.uppercased() ?? "not found"
+                                                                self.customAddressEdit.lblCity.text = j!.long_name?.uppercased() ?? "NOT FOUND"
                                                             }else if premise.contains("sublocality"){
                                                                 
-                                                                if self.getLocalityData.contains(j!.long_name ?? "not found"){
+                                                                if self.getLocalityData.contains(j!.long_name ?? "NOT FOUND"){
                                                                     
                                                                 }else{
-                                                                    self.getLocalityData.append(j!.long_name?.uppercased() ?? "not found")
+                                                                    self.getLocalityData.append(j!.long_name?.uppercased() ?? "NOT FOUND")
                                                                     
                                                                     if self.getLocalityData.count == 1{
-                                                                        self.customAddressEdit.txtAddress2.text = self.getLocalityData[0]
-                                                                        self.customAddressEdit.txtLocality.text = "not found"
+                                                                        self.customAddressEdit.lblAddress2.text = self.getLocalityData[0]
+                                                                        self.customAddressEdit.lblLocality.text = "NOT FOUND"
                                                                     }else if self.getLocalityData.count > 1{
-                                                                        self.customAddressEdit.txtAddress2.text = self.getLocalityData[0]
-                                                                        self.customAddressEdit.txtLocality.text = self.getLocalityData[1]
+                                                                        self.customAddressEdit.lblAddress2.text = self.getLocalityData[0]
+                                                                        self.customAddressEdit.lblLocality.text = self.getLocalityData[1]
                                                                     }
                                                                     
                                                                 }
                                                                 
                                                             }else  if premise.contains("country"){
-                                                                getCountry = j!.long_name ?? "not found"
+                                                                getCountry = j!.long_name ?? "NOT FOUND"
+                                                                print("country name from server: \(j?.long_name)")
                                                             }else if premise.contains("administrative_area_level_1"){
-                                                                self.customAddressEdit.txtState.text = j!.long_name?.uppercased() ?? "not found"
+                                                                self.customAddressEdit.lblState.text = j!.long_name?.uppercased() ?? "NOT FOUND"
                                                             }else{
                                                                 print(j?.long_name)
                                                             }
@@ -292,12 +291,25 @@ class HomeScreenController: UIViewController {
                                                     }
                                                 }
                                                 
+                                                self.customAddressEdit.storedDeviceId = defaultsToStoreDeviceId.string(forKey: "phoneId")
                                             }
                                             
                                         }else{
                                             self.showError(getError: "Error!", getMessage: "problem in getting result in response")
                                         }
+                                        
+                                        
+                                        ///MARK: GETTING COUNTRY PHONE CODE FOR CORRESPONDING CHOOSEN COUNTRY
+                                        
+                                        self.getRequestType.0 = false
+                                        self.getRequestType.1 = false
+                                        self.getRequestType.2 = false
+                                        self.getRequestType.3 = true
+                                        
+                                        self.requestType = .get
+                                        
                                     })
+                                    
                                 }
                                 self.homeSelectionDetails[0].1[0].3 = String(self.getFinalPostalCode)
                                 self.homeSelectionDetails[0].1[0].2 = String(self.getFinalPostalCode)
@@ -316,8 +328,10 @@ class HomeScreenController: UIViewController {
                                 self.getRequestType.0 = false
                                 self.getRequestType.1 = false
                                 self.getRequestType.2 = true
+                                self.getRequestType.3 = false
                                 self.removeActivity()
                                 self.requestType = .get
+                                
                                 
                                 self.requestType = .post
                                 
@@ -364,7 +378,35 @@ class HomeScreenController: UIViewController {
                             }
                             
                         }else{
-                            //IMPLEMENT CODE
+                            if getRequestType.3{
+                                
+                                
+                                guard let getCountry = getCountry else {
+                                    showError(getError: "Error!", getMessage: "Problem in getting Country Code for getting phone code.")
+                                    return
+                                }
+                                
+                                print("country name send to server: \(getCountry)")
+                                
+                                getModelToGiveCountryForPhoneCode = ModelToGiveCountryForPhoneCode(getCountry: getCountry)
+                                
+                                ///MARK: PROCESS TO GET PHONE CODE BY GIVING COUNTRY NAME
+                                
+                                DispatchQueue.global(qos: .userInitiated).async() {
+                                    
+                                    self.getSplashViewModel.getPhoneCodeDetails(postRequest: HelperClass.shared.urlFetchPhoneCode, sendDataModel: self.getModelToGiveCountryForPhoneCode, vc: self, completion: {_ in
+                                        self.removeActivity()
+                                        guard let getPhoneDetails = self.getSplashViewModel.getPhoneDetails else{
+                                            return
+                                        }
+                                        
+                                        print("phone code got from server: \(getPhoneDetails.status.phone_code)")
+                                        self.customAddressEdit.lblCcode.text = getPhoneDetails.status.phone_code
+                                        
+                                    })
+                                    
+                                }
+                            }
                         }
                     }
                 }
@@ -397,20 +439,18 @@ class HomeScreenController: UIViewController {
                                         
                                         if let getFetchedAddress = getAddressDetails.status.Deviceaddress{
                                             
-                                            var getFinalPhoneCode =  defaultsToStoreDeviceId.string(forKey: "phoneId")
-                                            var getFinalMobileNumber = defaultsToStoreDeviceId.string(forKey: "deviceId")
-                                            self.customAddressEdit.lblFirstName.text = "NOT FOUND"
-                                            self.customAddressEdit.lblLastName.text = "NOT FOUND"
-                                            self.customAddressEdit.lblAddress1.text = "NOT FOUND"
-                                            self.customAddressEdit.lblAddress2.text = "NOT FOUND"
-                                            self.customAddressEdit.lblLocality.text = "NOT FOUND"
-                                            self.customAddressEdit.lblCity.text = "NOT FOUND"
-                                            self.customAddressEdit.lblState.text = "NOT FOUND"
-                                            self.customAddressEdit.lblPostalCode.text = "NOT FOUND"
-                                            self.customAddressEdit.lblCcode.text = "NOT FOUND"
-                                            //                                            self.customAddressEdit.txtAcode.text = "NOT FOUND"
-                                            self.customAddressEdit.lblMnumber.text =  "NOT FOUND"
                                             
+                                            self.customAddressEdit.lblFirstName.text = ""
+                                            self.customAddressEdit.lblLastName.text = ""
+                                            self.customAddressEdit.lblAddress1.text = ""
+                                            self.customAddressEdit.lblAddress2.text = ""
+                                            self.customAddressEdit.lblLocality.text = ""
+                                            self.customAddressEdit.lblCity.text = ""
+                                            self.customAddressEdit.lblState.text = ""
+                                            self.customAddressEdit.lblPostalCode.text = ""
+                                            
+                                            self.customAddressEdit.lblMnumber.text =  ""
+                                            self.customAddressEdit.receivedDeviceId = ""
                                             
                                             for i in  self.customAddressEdit.btnGroup{
                                                 i.setImage(UIImage(named: "imgAddressUnselect"), for: .normal)
@@ -425,13 +465,12 @@ class HomeScreenController: UIViewController {
                                             self.customAddressEdit.lblCity.text = getFetchedAddress[0].CITY
                                             self.customAddressEdit.lblState.text = getFetchedAddress[0].STATE
                                             self.customAddressEdit.lblPostalCode.text = getFetchedAddress[0].POSTAL_CODE
-                                            self.customAddressEdit.lblCcode.text = getFetchedAddress[0].COUNTRY_CODE
-                                            self.customAddressEdit.receivedCountryId = getFetchedAddress[0].COUNTRY_CODE
+                                            
                                             self.customAddressEdit.lblMnumber.text = getFetchedAddress[0].MOBILE_NUMBER
                                             self.customAddressEdit.receivedDeviceId = getFetchedAddress[0].MOBILE_NUMBER
                                             //
-                                            self.customAddressEdit.storedCountryId = defaultsToStoreDeviceId.string(forKey: "phoneId")
-                                            self.customAddressEdit.storedDeviceId = defaultsToStoreDeviceId.string(forKey: "deviceId")
+                                            
+                                            self.customAddressEdit.storedDeviceId = defaultsToStoreDeviceId.string(forKey: "phoneId")
                                             
                                             
                                             ///MARK: CHANGE TICK MARK FOR SPECIFIED ADDRESS IN CUSTOM ADDRESS EDIT SCREEN
@@ -447,19 +486,19 @@ class HomeScreenController: UIViewController {
                                                 homeSelectionDetails[4].1[0].3 = "Home Address"
                                                 homeSelectionDetails[4].1[0].2 = "Home Address"
                                                 homeSelectionDetails[4].1[0].1 = 1
-                                                selectedId = 0
+                                                selectedId = 1
                                                 selectRetailTV.reloadData()
                                             case "2":
                                                 homeSelectionDetails[4].1[0].3 = "Office Address"
                                                 homeSelectionDetails[4].1[0].2 = "Office Address"
                                                 homeSelectionDetails[4].1[0].1 = 2
-                                                selectedId = 1
+                                                selectedId = 2
                                                 selectRetailTV.reloadData()
                                             case "3":
                                                 homeSelectionDetails[4].1[0].3 = "Other Address"
                                                 homeSelectionDetails[4].1[0].2 = "Other Address"
                                                 homeSelectionDetails[4].1[0].1 = 3  
-                                                selectedId = 2
+                                                selectedId = 3
                                                 selectRetailTV.reloadData()
                                             default:
                                                 print("")
@@ -491,9 +530,9 @@ class HomeScreenController: UIViewController {
         didSet {
             switch screenType {
             case .HomeScreen:
-                print("Home Screen")
+                print("")
             case .AddressEdit:
-                print("Address Screen")
+                print("")
             }
         }
     }
@@ -525,35 +564,6 @@ class HomeScreenController: UIViewController {
     @IBAction func btnLogin(_ sender: UIButton) {
     }
     @IBAction func btnHome(_ sender: UIButton) {
-        //        sender.isSelected = !sender.isSelected
-        //
-        //        if sender.isSelected{
-        //            imgHome.image = UIImage(named: "imgSave")
-        //
-        //
-        //        }else{
-        //            imgHome.image = UIImage(named: "imgHome")
-        //            ///MARK: GET MODEL TO UPDATE DATA TO SERVER
-        //            getUpdateHomeDetails.removeAll()
-        //            for i in homeSelectionDetails{
-        //
-        //                for (index,element) in i.1.enumerated(){
-        //                    if element.4 == 1{
-        //                        getUpdateHomeDetails.append(getUpdateToHomeDetails(getMenuId: i.0, getMenuEnable: i.2, getValue: element.2, getInnerId: element.1))
-        //                    }
-        //                }
-        //            }
-        //
-        //            ///MARK FINAL VALUES TO UPDATE
-        //
-        //            for i in getUpdateHomeDetails{
-        //                print(i.Menu_Id, i.Menu_Enable, i.Value, i.Innerid)
-        //            }
-        //
-        //            updateHomeControllerDetails()
-        //
-        //
-        //        }
         
         
         if isShowingAddressEdit{
@@ -576,18 +586,6 @@ class HomeScreenController: UIViewController {
                     getModelToUpdateAddress = ModelToUpdateAddress(getDeviceId: getDeviceId, getFirsName: self.customAddressEdit.lblFirstName.text!, getLastName: self.customAddressEdit.lblLastName.text!, getAddress1: self.customAddressEdit.lblAddress1.text!, getAddress2: self.customAddressEdit.lblAddress2.text!, getLocality: self.customAddressEdit.lblLocality.text!, getCity: self.customAddressEdit.lblCity.text!, getState: self.customAddressEdit.lblState.text!, getPostalCode: self.customAddressEdit.lblPostalCode.text!, getAddressType: String(getSelectedId), getAreaCode: "", getCountryCode: self.customAddressEdit.lblCcode.text!, getMobileNumber: self.customAddressEdit.lblMnumber.text!)
                     
                     
-                    print(self.customAddressEdit.lblFirstName.text)
-                    print(getModelToUpdateAddress.FIRST_NAME)
-                    print(self.customAddressEdit.lblLastName.text)
-                    print(self.customAddressEdit.lblAddress1.text)
-                    print(self.customAddressEdit.lblAddress2.text)
-                    print(self.customAddressEdit.lblLocality.text)
-                    print(self.customAddressEdit.lblCity.text)
-                    print(self.customAddressEdit.lblState.text)
-                    print(self.customAddressEdit.lblPostalCode.text)
-                    print(self.customAddressEdit.lblCcode.text)
-                    print(self.customAddressEdit.lblMnumber.text)
-                    
                     DispatchQueue.global(qos: .userInitiated).async() {
                         
                         self.getHomeControllerVM.postAddressEditDetails(postRequest: HelperClass.shared.addressUpdate, sendDataModel: self.getModelToUpdateAddress, vc: self, completion: { (message) -> Void in
@@ -595,22 +593,14 @@ class HomeScreenController: UIViewController {
                             
                             if message == 1{
                                 
-                                self.showToas(message: "Updated Successfully..", seconds: 1.5)
+                                self.showToas(message: "Address Updated Successfully..", seconds: 1.5)
                                 
                                 
                                 UIView.animate(withDuration: 1, animations: { [self] in
                                     
                                     self.customAddressEdit.alpha = 0
-                                    self.imgCart.alpha = 1
-                                    self.imgTimer.alpha = 1
-                                    self.btnCart.alpha = 1
-                                    self.btnTimer.alpha = 1
-                                    self.imgCart.isUserInteractionEnabled = true
-                                    self.imgTimer.isUserInteractionEnabled = true
-                                    self.btnCart.isUserInteractionEnabled = true
-                                    self.btnTimer.isUserInteractionEnabled = true
                                     self.isShowingAddressEdit = false
-                                    isAddressEditDetailChanged = false
+                                    isAddressEditDetailChanged = true
                                     
                                     self.btnLogin.isUserInteractionEnabled = true
                                     self.btnHome.isUserInteractionEnabled = true
@@ -622,19 +612,22 @@ class HomeScreenController: UIViewController {
                                             homeSelectionDetails[4].1[0].2 = self.homeSelectionDetails[4].1[0].3
                                             homeSelectionDetails[4].1[0].1 = 1
                                             toShowDeliverAddrssOverSwitchng = "Home Address"
+                                            self.selectRetailTV.reloadData()
                                         }else if getSelectedId == 2{
                                             self.homeSelectionDetails[4].1[0].3 = "Office Address"
                                             homeSelectionDetails[4].1[0].2 = self.homeSelectionDetails[4].1[0].3
                                             homeSelectionDetails[4].1[0].1 = 2
                                             toShowDeliverAddrssOverSwitchng = "Office Address"
+                                            self.selectRetailTV.reloadData()
                                         }else{
                                             self.homeSelectionDetails[4].1[0].3 = "Other Address"
                                             homeSelectionDetails[4].1[0].2 = self.homeSelectionDetails[4].1[0].3
                                             homeSelectionDetails[4].1[0].1 = 3
                                             toShowDeliverAddrssOverSwitchng = "Other Address"
+                                            self.selectRetailTV.reloadData()
                                         }
                                     }
-                                    self.selectRetailTV.reloadData()
+                                    
                                 })
                             }else{
                                 self.showError(getError: "Error!", getMessage: "Failed To Update.")
@@ -677,7 +670,6 @@ class HomeScreenController: UIViewController {
         }else{
             pickerViewType = .CountryPicker
         }
-        
     }
     
     
@@ -706,14 +698,12 @@ class HomeScreenController: UIViewController {
     
     ///MARK: FUNCTIONS
     func initialConfig() {
-        //        selectRetailTV?.register(HomeSelectionCell.nib, forCellReuseIdentifier: HomeSelectionCell.identifier)
-        //        pickerView.alpha = 0
-        //        selectRetailTV.delegate = self
-        //        selectRetailTV.dataSource = self
-        
+        imgHeaderLogo.sd_setImage(with: URL(string: HeaderLogo ?? ""))
         viewCustomAlert.btnClick = self
         getHomeControllerVM = HomeControllerViewModel()
         getHomeControllerVM.showError = self
+        getSplashViewModel = SplashViewModel()
+        getSplashViewModel.showError = self
         
         
         ///MARK: SETTING UP CUSTOM ADDRESS EDIT VIEW LABEL WITH INITIAL ADDRESS.
@@ -845,6 +835,7 @@ class HomeScreenController: UIViewController {
         getRequestType.0 = true
         getRequestType.1 = false
         getRequestType.2 = false
+        getRequestType.3 = false
         requestType = .get
         
     }
@@ -895,11 +886,11 @@ class HomeScreenController: UIViewController {
     }
     func switchHomeDetails(getIndex: Int){
         if startIndex == homeSelectionDetails[getIndex].1.count{
-            print("count finished")
+            
             startIndex = 0
-            print(homeSelectionDetails[getIndex].1[startIndex].3)
+            
         }else{
-            print(homeSelectionDetails[getIndex].1[startIndex].3)
+            
             startIndex += 1
         }
     }
@@ -933,9 +924,8 @@ class HomeScreenController: UIViewController {
                         
                         if let getId = element.Id, let getValue = element.val, let getStatus = element.status {
                             
-                            
                             self.fetchVerticalDetails.append((element.url_unselected,element.url_unselected,element.url_selected,false,getValue,getId,getStatus)) //3
-                            
+                            print(self.fetchVerticalDetails[0].5)
                             
                         } else {
                             self.showError(getError: "Error!", getMessage: "Problem in getting Retail Details from URL!")
@@ -1042,7 +1032,6 @@ class HomeScreenController: UIViewController {
                 //                self.homeSelectionDetails![0].1 =  String(self.getFinalPostalCode)
                 //                self.selectRetailTV.reloadData()
                 
-                print(String(self.getFinalPostalCode))
                 
                 if self.getPostalCodeFormats.count != 0{
                     let contains = self.getPostalCodeFormats.contains(where: {$0 == String(self.getFinalPostalCode)})
@@ -1053,6 +1042,7 @@ class HomeScreenController: UIViewController {
                         self.getRequestType.0 = false
                         self.getRequestType.1 = true
                         self.getRequestType.2 = false
+                        self.getRequestType.3 = false
                         self.requestType = .get
                     }
                     
@@ -1090,10 +1080,10 @@ extension HomeScreenController: UITableViewDelegate,UITableViewDataSource{
                 if element.4 == 1{
                     cell.lblRetail.text = homeSelectionDetails[indexPath.row].1[index].3
                     self.homeSelectionDetails[indexPath.row].1[index].2 = homeSelectionDetails[indexPath.row].1[index].3
-                    //                    cell.imgCell.image = homeSelectionDetails[indexPath.row].1[index].0
                     cell.imgCell.sd_setImage(with: URL(string: homeSelectionDetails[indexPath.row].1[index].0 ?? ""))
                 }
             }
+            
             
             cell.celSwtchPressed = self
             cell.btnNxt.tag = indexPath.row
@@ -1271,8 +1261,7 @@ extension HomeScreenController: donePressed,cellButtonPress{
     func DonePressed() {
         
         isAddressEditDetailChanged = true
-        imgHome.image = UIImage(named: "imgSave")
-        
+       
     }
 }
 
@@ -1280,7 +1269,6 @@ extension HomeScreenController: homeCellSwitchAction{
     func homeCellSwitchAction(cell: UITableViewCell, cellImage: UIImage, cellTitle: String, cellEnableDisable: Bool) {
         
         if let indexPath = self.selectRetailTV.indexPath(for: cell) {
-            print(indexPath.row)
             var cell =  self.selectRetailTV.cellForRow(at: indexPath)  as? HomeSelectionCell
             
             switch indexPath.row{
@@ -1299,7 +1287,6 @@ extension HomeScreenController: homeCellSwitchAction{
                 if homeSelectionDetails[indexPath.row].2 == 1{
                     if homeSelectionDetails[indexPath.row].4 == "Y"{
                         if startIndex == homeSelectionDetails[indexPath.row].1.count{
-                            print("count finished")
                             startIndex = 0
                             //                            cell?.imgCell.image = homeSelectionDetails[indexPath.row].1[startIndex].0
                             cell?.imgCell.sd_setImage(with: URL(string: homeSelectionDetails[indexPath.row].1[startIndex].0 ?? ""))
@@ -1343,7 +1330,6 @@ extension HomeScreenController: homeCellSwitchAction{
                 if homeSelectionDetails[indexPath.row].2 == 1{
                     if homeSelectionDetails[indexPath.row].4 == "Y"{
                         if startIndex == homeSelectionDetails[indexPath.row].1.count{
-                            print("count finished")
                             startIndex = 0
                             //                            cell?.imgCell.image = homeSelectionDetails[indexPath.row].1[startIndex].0
                             cell?.imgCell.sd_setImage(with: URL(string: homeSelectionDetails[indexPath.row].1[startIndex].0 ?? ""))
@@ -1386,15 +1372,7 @@ extension HomeScreenController: homeCellSwitchAction{
                             getDone = self
                             self.customAddressEdit.donePressed = self
                             self.customAddressEdit.alpha = 1
-                            self.imgCart.alpha = 0
-                            self.imgTimer.alpha = 0
-                            self.btnCart.alpha = 0
-                            self.btnTimer.alpha = 0
-                            self.imgCart.isUserInteractionEnabled = false
-                            self.imgTimer.isUserInteractionEnabled = false
-                            self.btnCart.isUserInteractionEnabled = false
-                            self.btnTimer.isUserInteractionEnabled = false
-                            self.imgHome.image = UIImage(named: "imgHome")
+                            self.imgHome.image = UIImage(named: "imgSave")
                             self.isShowingAddressEdit = true
                             self.btnLogin.isUserInteractionEnabled = false
                             
@@ -1488,7 +1466,7 @@ extension HomeScreenController{
         
     }
     func showDisconnectAlert(title : String, message: String){
-        
+        removeActivity()
         DispatchQueue.main.async {
             let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
             
@@ -1509,6 +1487,7 @@ extension HomeScreenController{
         
     }
     func showHideCustomAlert(isShowAlert: Bool,getTitle: String, getMessage: String,isError: Bool) {
+        removeActivity()
         if isShowAlert{
             
             if isError{

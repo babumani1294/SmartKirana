@@ -27,7 +27,6 @@ class RetailSelectionController: UIViewController {
     let minRowHeight: CGFloat = 50.0
     var isRetailTobeChanged = false
     
-    //    var homeSelectionDetails : [(UIImage,String,Bool)] = [(UIImage(named: "imgPostalCode")!,"",true),(UIImage(named: "imgShpFrmHome")!,"",true),(UIImage(named: "imgGroceryy")!,"",true),(UIImage(named: "imgHomeDelivery")!,"",true),(UIImage(named: "imgDeliveryAddress")!,"",true),(UIImage(named: "imgMyShop")!,"",true),(UIImage(named: "imgDeliveryTime")!,"",true)]
     
     var getDeviceId : String?
     var getSelectedRetailId: Int?
@@ -121,10 +120,10 @@ class RetailSelectionController: UIViewController {
                                 
                                 ///MARK ADDING DEFAULT VALUE TO UPDATE HOME SCREEN MODEL
                                 
-                                    if let getPostal = getPostal{
-                                        homeSelectionDetails[0].1[0].3 = getPostal
-                                        toShowPostalOverSwitchng = getPostal
-                                    }
+                                if let getPostal = getPostal{
+                                    homeSelectionDetails[0].1[0].3 = getPostal
+                                    toShowPostalOverSwitchng = getPostal
+                                }
                                 
                                 
                                 
@@ -171,6 +170,7 @@ class RetailSelectionController: UIViewController {
     
     ///mark: outlet
     
+    @IBOutlet weak var imgHeaderLogo: UIImageView!
     @IBOutlet weak var retailSelectionTV: UITableView!
     @IBOutlet weak var viewCustomAlert: customAlerts!
     @IBOutlet weak var imgBackward: UIImageView!
@@ -289,24 +289,24 @@ class RetailSelectionController: UIViewController {
     
     ///mark : function
     func initialConfig() {
+        imgHeaderLogo.sd_setImage(with: URL(string: HeaderLogo ?? ""))
         getHomeControllerVM = HomeControllerViewModel()
-        getHomeControllerVM.showError = self
         
+        getHomeControllerVM.showError = self
         viewCustomAlert.btnClick = self
+        
+        
         retailSelectionTV?.register(HomeSelectionCell.nib, forCellReuseIdentifier: HomeSelectionCell.identifier)
         getRetailViewModel = RetailSelectionViewModel()
         getRetailViewModel.showError = self
-        //        getDeviceId = UIDevice.current.identifierForVendor?.uuidString
-        
+     
         if  retailVerticalDetails != nil {
             retailSelectionTV.delegate = self
             retailSelectionTV.dataSource = self
         }else{
             showError(getError: "Error!", getMessage: "Problem in getting Retail Details.")
         }
-        
-        //        requestType = .get
-        
+       
     }
     
 }   
@@ -421,12 +421,12 @@ extension RetailSelectionController: UITableViewDelegate,UITableViewDataSource{
             if retailVerticalDetails[indexPath.row].3{
                 cell.lblRetail.text = retailVerticalDetails[indexPath.row].4
                 //                cell.imgCell.image = retailVerticalDetails[indexPath.row].0
-                cell.imgCell.sd_setImage(with: URL(string: retailVerticalDetails[indexPath.row].0!), placeholderImage: UIImage(named: "Logo"))
+                cell.imgCell.sd_setImage(with: URL(string: retailVerticalDetails[indexPath.row].0!))
                 cell.lblRetail.textColor = UIColor.black
             }else{
                 cell.lblRetail.text = retailVerticalDetails[indexPath.row].4
                 //                cell.imgCell.image = retailVerticalDetails[indexPath.row].0
-                cell.imgCell.sd_setImage(with: URL(string: retailVerticalDetails[indexPath.row].0!), placeholderImage: UIImage(named: "Logo"))
+                cell.imgCell.sd_setImage(with: URL(string: retailVerticalDetails[indexPath.row].0!))
                 cell.lblRetail.textColor = UIColor.lightGray
                 
             }
