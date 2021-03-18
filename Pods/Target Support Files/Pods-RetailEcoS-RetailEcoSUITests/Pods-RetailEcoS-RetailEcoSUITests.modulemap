@@ -1,0 +1,6 @@
+framework module Pods_RetailEcoS_RetailEcoSUITests {
+  umbrella header "Pods-RetailEcoS-RetailEcoSUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

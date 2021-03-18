@@ -1,0 +1,1361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "827BE37B-25E9-40EF-982A-580FCAD0C2D7"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "97574F2B-E34D-4B27-9673-B6A66B5DC344"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/Starting Up &amp; Registration/Login/View Controller/xib/customAlert.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "init(frame:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6FE64A9E-3566-47C9-AFB6-0443ED63278E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/Starting Up &amp; Registration/Login/View Controller/xib/customAlert.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "init(coder:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "17CE72CE-B6E1-487F-9441-B6D5BD250738"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/Starting Up &amp; Registration/Login/View Controller/xib/customAlert.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "initiateView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3518623A-B4FA-495C-8D10-D09866445C60"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/Login/View Controller/LoginController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "348"
+            endingLineNumber = "348"
+            landmarkName = "edtMailPassword(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A460D8A0-013D-4D85-8F74-BCFBA4804DC2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/Login/View Controller/LoginController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "332"
+            endingLineNumber = "332"
+            landmarkName = "btnShowHome(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C2E66B67-0F4A-4B81-89FB-213FC4A5BC57"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/Login/View Controller/LoginController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "694"
+            endingLineNumber = "694"
+            landmarkName = "DonePressed()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C2E66B67-0F4A-4B81-89FB-213FC4A5BC57 - 2d800d4e0614ec12"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RetailEcoS.LoginController.DonePressed() -&gt; ()"
+                  moduleName = "RetailEcoS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pace/Documents/Pace%20Automation/Projects/Smart%20Kirana/Code/Recent/RetailEcoS%20Swift%20Codes%202/RetailEcoS/Controller/Login/View%20Controller/LoginController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "443"
+                  endingLineNumber = "443"
+                  offsetFromSymbolStart = "1192">
+               </Location>
+               <Location
+                  uuid = "C2E66B67-0F4A-4B81-89FB-213FC4A5BC57 - 2d800d4e0614ec12"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RetailEcoS.LoginController.DonePressed() -&gt; ()"
+                  moduleName = "RetailEcoS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pace/Documents/Pace%20Automation/Projects/Smart%20Kirana/Code/Recent/RetailEcoS%20Swift%20Codes%202/RetailEcoS/Controller/Login/View%20Controller/LoginController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "443"
+                  endingLineNumber = "443"
+                  offsetFromSymbolStart = "1812">
+               </Location>
+               <Location
+                  uuid = "C2E66B67-0F4A-4B81-89FB-213FC4A5BC57 - 6123d8cabae27a61"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 () -&gt; () in RetailEcoS.LoginController.DonePressed() -&gt; ()"
+                  moduleName = "RetailEcoS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pace/Documents/Pace%20Automation/Projects/Smart%20Kirana/Code/Recent/RetailEcoS%20Swift%20Codes%202/RetailEcoS/Controller/Login/View%20Controller/LoginController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "444"
+                  endingLineNumber = "444"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DF7DA97F-7AC0-41D9-AB94-6D5680305485"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/Login/View Controller/LoginController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "624"
+            endingLineNumber = "624"
+            landmarkName = "DonePressed()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DF7DA97F-7AC0-41D9-AB94-6D5680305485 - 2d800d4e0614e518"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RetailEcoS.LoginController.DonePressed() -&gt; ()"
+                  moduleName = "RetailEcoS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pace/Documents/Pace%20Automation/Projects/Smart%20Kirana/Code/Recent/RetailEcoS%20Swift%20Codes%202/RetailEcoS/Controller/Login/View%20Controller/LoginController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "373"
+                  endingLineNumber = "373"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "DF7DA97F-7AC0-41D9-AB94-6D5680305485 - 2d800d4e0614e518"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RetailEcoS.LoginController.DonePressed() -&gt; ()"
+                  moduleName = "RetailEcoS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pace/Documents/Pace%20Automation/Projects/Smart%20Kirana/Code/Recent/RetailEcoS%20Swift%20Codes%202/RetailEcoS/Controller/Login/View%20Controller/LoginController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "373"
+                  endingLineNumber = "373"
+                  offsetFromSymbolStart = "160">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "37E47B46-3447-4854-9891-868BD776D398"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/Login/View Controller/LoginController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "661"
+            endingLineNumber = "661"
+            landmarkName = "DonePressed()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3589208B-49C6-470C-BD4E-C2ABA0ED3A31"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/Splash/MobileRegisterViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "mobileRegisterPost(postRequest:sendDataModel:vc:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8107C724-6FB6-4500-A38B-2C0A514B37F6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/Retail Selection/RetailSelectionViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "getRetailVerticalDetails(postRequest:sendDataModel:vc:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8CD5B659-01A1-4427-A2EB-8D941E595933"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeSelectionListController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
+            landmarkName = "requestType"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "8CD5B659-01A1-4427-A2EB-8D941E595933 - 4fc1b5f78ab7d293"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RetailEcoS.HomeSelectionListController.requestType.didset : RetailEcoS.RequestType"
+                  moduleName = "RetailEcoS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pace/Documents/Pace%20Automation/Projects/Smart%20Kirana/Code/Recent/RetailEcoS%20Swift%20Codes%202/RetailEcoS/Controller/HomeController/View%20Controller/HomeSelectionListController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "952">
+               </Location>
+               <Location
+                  uuid = "8CD5B659-01A1-4427-A2EB-8D941E595933 - 2cbbb917579e3192"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in RetailEcoS.HomeSelectionListController.requestType.didset : RetailEcoS.RequestType"
+                  moduleName = "RetailEcoS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pace/Documents/Pace%20Automation/Projects/Smart%20Kirana/Code/Recent/RetailEcoS%20Swift%20Codes%202/RetailEcoS/Controller/HomeController/View%20Controller/HomeSelectionListController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F15E8417-D4B2-4534-9873-A41290AE03C6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeControllerViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "getCountryAddress(getPostalCode:vc:completions:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "85C765D7-6A8C-4D4C-8417-D723E223E863"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeControllerViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "getCountryAddress(getPostalCode:vc:completions:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "85C765D7-6A8C-4D4C-8417-D723E223E863 - 737aef2cca6b901c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RetailEcoS.HomeControllerViewModel.getCountryAddress(getPostalCode: Swift.String, vc: __C.UIViewController, completions: () -&gt; ()) -&gt; ()"
+                  moduleName = "RetailEcoS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pace/Documents/Pace%20Automation/Projects/Smart%20Kirana/Code/Recent/RetailEcoS%20Swift%20Codes%202/RetailEcoS/Controller/HomeController/View%20Controller/HomeControllerViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "406">
+               </Location>
+               <Location
+                  uuid = "85C765D7-6A8C-4D4C-8417-D723E223E863 - fae164c97d6e43a4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;) -&gt; () in RetailEcoS.HomeControllerViewModel.getCountryAddress(getPostalCode: Swift.String, vc: __C.UIViewController, completions: () -&gt; ()) -&gt; ()"
+                  moduleName = "RetailEcoS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pace/Documents/Pace%20Automation/Projects/Smart%20Kirana/Code/Recent/RetailEcoS%20Swift%20Codes%202/RetailEcoS/Controller/HomeController/View%20Controller/HomeControllerViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "449">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D0229A34-C7A8-46F3-BF7F-4A33213934E8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeControllerViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "getCountryTimeZone(getLat:getLong:getTimeStamp:vc:completions:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C45B1B6E-57D2-4F2F-B11B-C635968F52B9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeSelectionListController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "306"
+            endingLineNumber = "306"
+            landmarkName = "requestType"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "C45B1B6E-57D2-4F2F-B11B-C635968F52B9 - 4fc1b5f78ab7d868"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RetailEcoS.HomeSelectionListController.requestType.didset : RetailEcoS.RequestType"
+                  moduleName = "RetailEcoS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pace/Documents/Pace%20Automation/Projects/Smart%20Kirana/Code/Recent/RetailEcoS%20Swift%20Codes%202/RetailEcoS/Controller/HomeController/View%20Controller/HomeSelectionListController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "1688">
+               </Location>
+               <Location
+                  uuid = "C45B1B6E-57D2-4F2F-B11B-C635968F52B9 - 1aee92d536896cea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 () -&gt; () in RetailEcoS.HomeSelectionListController.requestType.didset : RetailEcoS.RequestType"
+                  moduleName = "RetailEcoS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pace/Documents/Pace%20Automation/Projects/Smart%20Kirana/Code/Recent/RetailEcoS%20Swift%20Codes%202/RetailEcoS/Controller/HomeController/View%20Controller/HomeSelectionListController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BEA119E4-5F4D-4973-BA07-A010732E09EC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeSelectionListController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "745"
+            endingLineNumber = "745"
+            landmarkName = "generateCurrentTimeStamp()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7D1D44ED-AAFA-41C4-9147-030D8A3ABB1E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeSelectionListController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "741"
+            endingLineNumber = "741"
+            landmarkName = "generateCurrentTimeStamp()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D4A0C731-F9F4-47EB-BC85-2D21E50A6C09"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeSelectionListController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "552"
+            endingLineNumber = "552"
+            landmarkName = "initialConfig()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "65DC8CD6-462E-4C9B-B449-6A1FF1965E5B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeSelectionListController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "604"
+            endingLineNumber = "604"
+            landmarkName = "initialConfig()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "88AC486F-452D-4182-9465-6F659C3E990C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeControllerViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "getCountryName(vc:completions:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4DBA7825-0006-4FB3-ACD2-7D9A3CD938F2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeControllerViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "getCountryAddress(getPostalCode:vc:completions:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6F266751-1B92-4F60-8F51-B74F2FEF5123"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/HelperClass/HelperClass.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
+            landmarkName = "addDoneButtonOnKeyboard()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "74C1B111-7AB4-4785-80C0-A6AC7067F3BF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeSelectionListController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
+            landmarkName = "requestType"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "74C1B111-7AB4-4785-80C0-A6AC7067F3BF - 2cbbb917579e3761"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in RetailEcoS.HomeSelectionListController.requestType.didset : RetailEcoS.RequestType"
+                  moduleName = "RetailEcoS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pace/Documents/Pace%20Automation/Projects/Smart%20Kirana/Code/Recent/RetailEcoS%20Swift%20Codes%202/RetailEcoS/Controller/HomeController/View%20Controller/HomeSelectionListController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "142"
+                  endingLineNumber = "142"
+                  offsetFromSymbolStart = "2684">
+               </Location>
+               <Location
+                  uuid = "74C1B111-7AB4-4785-80C0-A6AC7067F3BF - e70d6ae94feb804"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #2 () -&gt; () in RetailEcoS.HomeSelectionListController.requestType.didset : RetailEcoS.RequestType"
+                  moduleName = "RetailEcoS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pace/Documents/Pace%20Automation/Projects/Smart%20Kirana/Code/Recent/RetailEcoS%20Swift%20Codes%202/RetailEcoS/Controller/HomeController/View%20Controller/HomeSelectionListController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "144"
+                  endingLineNumber = "144"
+                  offsetFromSymbolStart = "160">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D2008286-3620-4474-AC66-0A5B8E1E154C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeControllerViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
+            landmarkName = "getCountryPostalCode(getLat:getLong:vc:completions:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D3E76925-CE03-4CA5-B47C-0B91C8702BD4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/Splash/SplashViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
+            landmarkName = "getCompanyDetails(postRequest:sendDataModel:vc:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "600591B1-3E08-40B3-89DC-46E8B692432A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/Splash/SplashViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "getCompanyDetails(postRequest:sendDataModel:vc:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "600591B1-3E08-40B3-89DC-46E8B692432A - d8885aef774c96d8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RetailEcoS.SplashViewModel.getCompanyDetails(postRequest: Swift.String, sendDataModel: RetailEcoS.ModelToGiveCountry, vc: __C.UIViewController, completion: (Swift.String) -&gt; ()) -&gt; ()"
+                  moduleName = "RetailEcoS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pace/Documents/Pace%20Automation/Projects/Smart%20Kirana/Code/Recent/RetailEcoS%20Swift%20Codes%202/RetailEcoS/Controller/Splash/SplashViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "142"
+                  endingLineNumber = "142"
+                  offsetFromSymbolStart = "336">
+               </Location>
+               <Location
+                  uuid = "600591B1-3E08-40B3-89DC-46E8B692432A - 61dd2934e22d7156"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;) -&gt; () in RetailEcoS.SplashViewModel.getCompanyDetails(postRequest: Swift.String, sendDataModel: RetailEcoS.ModelToGiveCountry, vc: __C.UIViewController, completion: (Swift.String) -&gt; ()) -&gt; ()"
+                  moduleName = "RetailEcoS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pace/Documents/Pace%20Automation/Projects/Smart%20Kirana/Code/Recent/RetailEcoS%20Swift%20Codes%202/RetailEcoS/Controller/Splash/SplashViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "145"
+                  endingLineNumber = "145"
+                  offsetFromSymbolStart = "304">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6E3E3FDB-99D2-47F4-97B9-D9834B4C95E4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/HelperClass/ServiceClass.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "getSearchResults(url:vc:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C54EF05B-0B37-468D-8942-00248C47CA30"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/HelperClass/ServiceClass.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "postRequest(urls:getModel:vc:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F8055790-7F3F-4F31-88D4-5C60F90672A8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/xib/HomeSelectionCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "awakeFromNib()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F8D98FA6-DBC1-4B95-8213-5382D196C3E2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeSelectionListController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1078"
+            endingLineNumber = "1078"
+            landmarkName = "cellButtonPress(btn:btnClickCount:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F8D98FA6-DBC1-4B95-8213-5382D196C3E2 - 747d45153a676cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RetailEcoS.HomeSelectionListController.cellButtonPress(btn: __C.UIButton, btnClickCount: Swift.Int) -&gt; ()"
+                  moduleName = "RetailEcoS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pace/Documents/Pace%20Automation/Projects/Smart%20Kirana/Code/Recent/RetailEcoS%20Swift%20Codes%202/RetailEcoS/Controller/HomeController/View%20Controller/HomeSelectionListController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "744"
+                  endingLineNumber = "744"
+                  offsetFromSymbolStart = "154">
+               </Location>
+               <Location
+                  uuid = "F8D98FA6-DBC1-4B95-8213-5382D196C3E2 - 747d45153a676cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RetailEcoS.HomeSelectionListController.cellButtonPress(btn: __C.UIButton, btnClickCount: Swift.Int) -&gt; ()"
+                  moduleName = "RetailEcoS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pace/Documents/Pace%20Automation/Projects/Smart%20Kirana/Code/Recent/RetailEcoS%20Swift%20Codes%202/RetailEcoS/Controller/HomeController/View%20Controller/HomeSelectionListController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "744"
+                  endingLineNumber = "744"
+                  offsetFromSymbolStart = "238">
+               </Location>
+               <Location
+                  uuid = "F8D98FA6-DBC1-4B95-8213-5382D196C3E2 - 747d45153a676cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RetailEcoS.HomeSelectionListController.cellButtonPress(btn: __C.UIButton, btnClickCount: Swift.Int) -&gt; ()"
+                  moduleName = "RetailEcoS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pace/Documents/Pace%20Automation/Projects/Smart%20Kirana/Code/Recent/RetailEcoS%20Swift%20Codes%202/RetailEcoS/Controller/HomeController/View%20Controller/HomeSelectionListController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "744"
+                  endingLineNumber = "744"
+                  offsetFromSymbolStart = "446">
+               </Location>
+               <Location
+                  uuid = "F8D98FA6-DBC1-4B95-8213-5382D196C3E2 - 747d45153a676cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RetailEcoS.HomeSelectionListController.cellButtonPress(btn: __C.UIButton, btnClickCount: Swift.Int) -&gt; ()"
+                  moduleName = "RetailEcoS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pace/Documents/Pace%20Automation/Projects/Smart%20Kirana/Code/Recent/RetailEcoS%20Swift%20Codes%202/RetailEcoS/Controller/HomeController/View%20Controller/HomeSelectionListController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "744"
+                  endingLineNumber = "744"
+                  offsetFromSymbolStart = "2815">
+               </Location>
+               <Location
+                  uuid = "F8D98FA6-DBC1-4B95-8213-5382D196C3E2 - 747d45153a676cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RetailEcoS.HomeSelectionListController.cellButtonPress(btn: __C.UIButton, btnClickCount: Swift.Int) -&gt; ()"
+                  moduleName = "RetailEcoS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pace/Documents/Pace%20Automation/Projects/Smart%20Kirana/Code/Recent/RetailEcoS%20Swift%20Codes%202/RetailEcoS/Controller/HomeController/View%20Controller/HomeSelectionListController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "744"
+                  endingLineNumber = "744"
+                  offsetFromSymbolStart = "3001">
+               </Location>
+               <Location
+                  uuid = "F8D98FA6-DBC1-4B95-8213-5382D196C3E2 - 747d45153a676cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RetailEcoS.HomeSelectionListController.cellButtonPress(btn: __C.UIButton, btnClickCount: Swift.Int) -&gt; ()"
+                  moduleName = "RetailEcoS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pace/Documents/Pace%20Automation/Projects/Smart%20Kirana/Code/Recent/RetailEcoS%20Swift%20Codes%202/RetailEcoS/Controller/HomeController/View%20Controller/HomeSelectionListController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "744"
+                  endingLineNumber = "744"
+                  offsetFromSymbolStart = "3187">
+               </Location>
+               <Location
+                  uuid = "F8D98FA6-DBC1-4B95-8213-5382D196C3E2 - 747d45153a676cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RetailEcoS.HomeSelectionListController.cellButtonPress(btn: __C.UIButton, btnClickCount: Swift.Int) -&gt; ()"
+                  moduleName = "RetailEcoS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pace/Documents/Pace%20Automation/Projects/Smart%20Kirana/Code/Recent/RetailEcoS%20Swift%20Codes%202/RetailEcoS/Controller/HomeController/View%20Controller/HomeSelectionListController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "744"
+                  endingLineNumber = "744"
+                  offsetFromSymbolStart = "3373">
+               </Location>
+               <Location
+                  uuid = "F8D98FA6-DBC1-4B95-8213-5382D196C3E2 - 747d45153a676cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RetailEcoS.HomeSelectionListController.cellButtonPress(btn: __C.UIButton, btnClickCount: Swift.Int) -&gt; ()"
+                  moduleName = "RetailEcoS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pace/Documents/Pace%20Automation/Projects/Smart%20Kirana/Code/Recent/RetailEcoS%20Swift%20Codes%202/RetailEcoS/Controller/HomeController/View%20Controller/HomeSelectionListController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "744"
+                  endingLineNumber = "744"
+                  offsetFromSymbolStart = "3559">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "755AFF57-7739-4856-ADE8-1F0D0FDC4882"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeSelectionListController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1070"
+            endingLineNumber = "1070"
+            landmarkName = "textViewShouldBeginEditing(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DB5EC2E0-B07C-48E2-8327-9E7E49F428BF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/Custom Keyboard/LetterPad.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "keyPressed(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5F791E1A-1AA7-4ABA-84D5-81B3EE56CB16"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/Custom Keyboard/LetterPad.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "keyPressed(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2B099336-E136-45B0-816D-8F335E86D8F0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeControllerViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "347"
+            endingLineNumber = "347"
+            landmarkName = "getAddressDetails(postRequest:sendDataModel:vc:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CD39CE5F-5D5B-426A-96F3-7597083C9AB1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeControllerViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "353"
+            endingLineNumber = "353"
+            landmarkName = "getAddressDetails(postRequest:sendDataModel:vc:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7E02D276-00C5-4446-A724-1CBC1426B8C7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeControllerViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "407"
+            endingLineNumber = "407"
+            landmarkName = "postAddressEditDetails(postRequest:sendDataModel:vc:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6322A784-1863-4983-A3B7-7C7931B50D49"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeControllerViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "416"
+            endingLineNumber = "416"
+            landmarkName = "postAddressEditDetails(postRequest:sendDataModel:vc:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "018834D9-59B8-49E2-B79E-61BB7C5C68B4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeControllerViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "365"
+            endingLineNumber = "365"
+            landmarkName = "getAddressDetails(postRequest:sendDataModel:vc:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BB6821BE-47C8-456B-8BBA-42347CCBA705"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeSelectionListController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "399"
+            endingLineNumber = "399"
+            landmarkName = "requestType"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5676793B-2F6E-4DA9-B78A-4724426E128E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeSelectionListController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "requestType"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "40C8E464-C465-46CE-9D93-8D8CE59F2B5E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeControllerViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "getCountryAddress(getPostalCode:vc:completions:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "15032C4F-CB63-4D51-8DC3-B8D95C04993F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeSelectionListController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "798"
+            endingLineNumber = "798"
+            landmarkName = "onDoneButtonTapped()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3592D55C-EBE6-40E1-B374-3C697428B2A7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/Registration/RegistrationController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7146003E-143C-4B06-8D91-F51920E4838B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/Registration/RegistrationController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "535E9D19-8F3D-403E-B5B1-BA0A40B9ABFA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/Custom Keyboard/NumberLetterPadLetterPad.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "DONEACTION(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2818009E-BF7E-4B36-8835-BCFF9DFB7B5F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeSelectionListController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1168"
+            endingLineNumber = "1168"
+            landmarkName = "cellButtonPress(btn:btnClickCount:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FEC7063F-DA53-4FF5-99DB-47BE3C7A1A11"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeSelectionListController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1151"
+            endingLineNumber = "1151"
+            landmarkName = "cellButtonPress(btn:btnClickCount:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B0FC346C-5905-4121-971A-EA6C931ECF1C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeSelectionListController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "requestType"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FC8D51F9-5935-4669-A026-6F0F230D8A10"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeSelectionListController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1232"
+            endingLineNumber = "1232"
+            landmarkName = "DonePressed()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FC8D51F9-5935-4669-A026-6F0F230D8A10 - d964e4573c27349e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RetailEcoS.HomeSelectionListController.DonePressed() -&gt; ()"
+                  moduleName = "RetailEcoS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pace/Documents/Pace%20Automation/Projects/Smart%20Kirana/Code/Recent/RetailEcoS/RetailEcoS/Controller/HomeController/View%20Controller/HomeSelectionListController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1232"
+                  endingLineNumber = "1232"
+                  offsetFromSymbolStart = "16892">
+               </Location>
+               <Location
+                  uuid = "FC8D51F9-5935-4669-A026-6F0F230D8A10 - 94206953a6c4824"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in RetailEcoS.HomeSelectionListController.DonePressed() -&gt; ()"
+                  moduleName = "RetailEcoS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pace/Documents/Pace%20Automation/Projects/Smart%20Kirana/Code/Recent/RetailEcoS/RetailEcoS/Controller/HomeController/View%20Controller/HomeSelectionListController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1234"
+                  endingLineNumber = "1234"
+                  offsetFromSymbolStart = "55">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2E1C3322-7B64-4201-9C84-D2DEA0D7C237"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/Registration/RegistrationController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "RegistrationController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "43F87F24-911F-4BF0-930D-C3F4DB741E98"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/xib/CustomAddressEdit.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "454"
+            endingLineNumber = "454"
+            landmarkName = "NumberLetterPad(data:flag:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "42CBD294-F9CC-4B85-81F0-99104D7DBEBD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeScreenController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
+            landmarkName = "requestType"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "31BEF9C9-A574-40BB-93E1-18E9AE708E6A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeScreenController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "314"
+            endingLineNumber = "314"
+            landmarkName = "requestType"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8ED1E8F2-B0B3-4910-ACDF-3BE8A013101F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeScreenController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "336"
+            endingLineNumber = "336"
+            landmarkName = "requestType"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0B4B6962-53B3-4C85-B210-CD0860F0AC7D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeControllerViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "297"
+            endingLineNumber = "297"
+            landmarkName = "getFetchVerticalDetails(postRequest:sendDataModel:vc:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "43700D04-792C-4E58-989C-16872DAB4E6D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeControllerViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "264"
+            endingLineNumber = "264"
+            landmarkName = "getHomeControllerDetails(postRequest:sendDataModel:vc:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "44305FB6-8788-4C8A-8706-0FE0303551E9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeControllerViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "313"
+            endingLineNumber = "313"
+            landmarkName = "getFetchVerticalDetails(postRequest:sendDataModel:vc:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "06833DE3-A05F-4676-A6D4-A2C926C508B8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/FetchRetailController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "202"
+            endingLineNumber = "202"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9E828881-57E0-41A2-AFF0-D31589F9229F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/Controller/HomeController/View Controller/HomeControllerViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "447"
+            endingLineNumber = "447"
+            landmarkName = "postHomeControllerDetails(postRequest:sendDataModel:vc:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "54A89A52-8FA1-413B-8C01-B36488326C50"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RetailEcoS/HelperClass/ServiceClass.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "postRequest(urls:getModel:vc:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

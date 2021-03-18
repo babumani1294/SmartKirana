@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="customHeaderView" customModule="RetailEcoS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="415" height="88"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pUO-oz-tST">
+                    <rect key="frame" x="0.0" y="0.0" width="415" height="88"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Solution to function effectively the following System level permissions are required" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahv-VA-aXF">
+                            <rect key="frame" x="20" y="27.5" width="375" height="33.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="ahv-VA-aXF" firstAttribute="leading" secondItem="pUO-oz-tST" secondAttribute="leading" constant="20" id="4Ra-F3-c3x"/>
+                        <constraint firstItem="ahv-VA-aXF" firstAttribute="centerX" secondItem="pUO-oz-tST" secondAttribute="centerX" id="QkG-On-qnV"/>
+                        <constraint firstAttribute="trailing" secondItem="ahv-VA-aXF" secondAttribute="trailing" constant="20" id="ZOF-fB-DCH"/>
+                        <constraint firstItem="ahv-VA-aXF" firstAttribute="centerY" secondItem="pUO-oz-tST" secondAttribute="centerY" id="w2f-2E-jIs"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="pUO-oz-tST" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="4k8-Mg-g2f"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pUO-oz-tST" secondAttribute="trailing" id="DIK-fK-Xec"/>
+                <constraint firstAttribute="bottom" secondItem="pUO-oz-tST" secondAttribute="bottom" id="hfM-zJ-iU6"/>
+                <constraint firstItem="pUO-oz-tST" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zDW-5L-xFi"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lblheaderFooter" destination="ahv-VA-aXF" id="gTP-6n-idW"/>
+            </connections>
+            <point key="canvasLocation" x="-151.44927536231884" y="-184.82142857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
